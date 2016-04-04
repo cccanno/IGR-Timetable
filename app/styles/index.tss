@@ -1,15 +1,57 @@
-".container": {
-	backgroundColor:"white"
+"#indexWin": {
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+	backgroundColor: "#6699FF"
 }
 
-"Label": {
+"#wholeView": {
 	width: Ti.UI.SIZE,
 	height: Ti.UI.SIZE,
-	color: "#000"
+	backgroundColor: "#6699FF",
+	layout: "vertical"
 }
 
-"#label": {
+".title": {
+	color: "#FFFFFF",
 	font: {
-		fontSize: 12
-	}
+		fontSize: 36,
+		fontWeight: "bold"
+	},
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE
+}
+
+".lineView": {
+	top: 20,
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	layout: "vertical"
+}
+
+".lineImage": {
+	width: 130,
+	height: 130,
+	backgroundColor: "#6699FF"
+}
+
+".lineLabel": {
+	top: 5,
+	color: "#FFFFFF",
+	font: {
+		fontSize: 14,
+		fontWeight: "bold"
+	},
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE
+}
+
+"#serviceBtn": {
+	color: "#333333",
+	font: {
+		fontSize: 14
+	},
+	right: 5,
+	bottom: 5,
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE
 }

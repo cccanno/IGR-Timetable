@@ -1,5 +1,17 @@
 <Alloy>
-	<Window class="container">
-		<Label id="label" onClick="doClick">Hello, World</Label>
+	<Window id="indexWin">
+		<View id="wholeView">
+			<Label class="title">いわて銀河鉄道</Label>
+			<Label class="title" top="10">時刻表</Label>
+			<View class="lineView" onClick="openUpTimeTable">
+				<ImageView id="upImage" class="lineImage" image="/icons/up.png" />
+				<Label class="lineLabel">上り（盛岡方面）</Label>
+			</View>
+			<View class="lineView" onClick="openDownTimeTable">
+				<ImageView id="downImage" class="lineImage" image="/icons/down.png" />
+				<Label class="lineLabel">下り（二戸方面）</Label>
+			</View>
+		</View>
+		<Button id="serviceBtn" onClick="openServicePage">運行情報はこちら</Button>
 	</Window>
 </Alloy>
