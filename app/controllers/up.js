@@ -501,6 +501,22 @@ var metokiData = [
 ];
 $.metokiListSection.setItems(metokiData);
 
+function getCurrentPosition() {
+	Ti.Geolocation.getCurrentPosition(function(e) {
+		if (!e.success || e.error) {
+			Ti.UI.createAlertDialog({
+				title: "エラー",
+				message: "位置情報の取得に失敗しました"
+			});
+			return;
+		}
+		Alloy.Globals.latitude = e.coords.latitude;
+		Alloy.Globals.longitude = e.coords.longitude;
+		Ti.API.debug("緯度：" + e.coords.latitude);
+		Ti.API.debug("経度：" + e.coords.longitude);
+	});
+}
+
 function setListPage() {
 	$.scrollableView.setCurrentPage(Alloy.Globals.currentPage);
 }

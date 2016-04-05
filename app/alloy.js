@@ -11,3 +11,6 @@
 // Alloy.Globals.someGlobalFunction = function(){};
 
 Alloy.Globals.currentPage = 0;
+Alloy.Globals.Map = require('ti.map');
+Alloy.Globals.latitude = 39.702053;
+Alloy.Globals.longitude = 141.154484;

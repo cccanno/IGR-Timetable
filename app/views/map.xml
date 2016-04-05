@@ -1,0 +1,10 @@
+<Alloy>
+	<Window id="mapWin">
+		<View id="navView">
+			<Button id="backBtn" onClick="closeWin" />
+			<Label id="title">地図</Label>
+		</View>
+		<View id="line" />
+		<View id="mapView" module="ti.map" />
+	</Window>
+</Alloy>

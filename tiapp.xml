@@ -17,6 +17,8 @@
     <default-background-color>#FFFCFA</default-background-color>
     <plist>
       <dict>
+        <key>NSLocationWhenInUseUsageDescription</key>
+        <string></string>
         <key>UISupportedInterfaceOrientations~iphone</key>
         <array>
           <string>UIInterfaceOrientationPortrait</string>
@@ -51,6 +53,8 @@
     <theme>default</theme>
   </mobileweb>
   <modules>
+    <module platform="android">ti.map</module>
+    <module platform="iphone">ti.map</module>
   </modules>
   <deployment-targets>
     <target device="android">true</target>
