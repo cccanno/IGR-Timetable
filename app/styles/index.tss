@@ -25,13 +25,14 @@
 	top: 20,
 	width: Ti.UI.SIZE,
 	height: Ti.UI.SIZE,
+	backgroundColor: "transparent",
 	layout: "vertical"
 }
 
 ".lineImage": {
 	width: 130,
 	height: 130,
-	backgroundColor: "#6699FF"
+	backgroundColor: "transparent"
 }
 
 ".lineLabel": {

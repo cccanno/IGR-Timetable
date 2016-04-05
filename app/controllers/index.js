@@ -1,9 +1,11 @@
 function openUpTimeTable() {
-
+  var upWin = Alloy.createController("up").getView();
+  upWin.open();
 }
 
 function openDownTimeTable() {
-
+  var downWin = Alloy.createController("down").getView();
+  downWin.open();
 }
 
 function openServicePage() {
