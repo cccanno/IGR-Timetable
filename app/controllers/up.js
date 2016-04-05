@@ -501,13 +501,21 @@ var metokiData = [
 ];
 $.metokiListSection.setItems(metokiData);
 
+function setListPage() {
+	$.scrollableView.setCurrentPage(Alloy.Globals.currentPage);
+}
+
 function changePage(e) {
 	$.stationName.setText(stations[e.currentPage]);
 }
 
 function openSelectStation() {
-	var selectWin = Alloy.createController('select').getView();
-	selectWin.open()	;
+	var arg = {
+		lineName: $.lineName.text,
+		stations: stations
+	}
+	var selectWin = Alloy.createController('select', arg).getView();
+	selectWin.open();
 }
 
 function onGPS() {
