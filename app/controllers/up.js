@@ -1,5 +1,9 @@
 // Arguments passed into this controller can be accessed via the `$.args` object directly or:
 var args = $.args;
+var currentTime;
+var hour, minutes;
+var scrollItemIndex;
+var onSetValue = false;
 
 var stations = [
 	"青山駅",
@@ -501,43 +505,170 @@ var metokiData = [
 ];
 $.metokiListSection.setItems(metokiData);
 
+var allSatationsData = [
+	aoyamaData,
+	kuriyagawaData,
+	sugoData,
+	takizawaData,
+	sibutamiData,
+	koumaData,
+	kawagutiData,
+	numakunaiData,
+	midouData,
+	okunakayamaData,
+	kotunagiData,
+	kozuyaData,
+	itinoheData,
+	ninoheData,
+	tomaiData,
+	kintaitiData,
+	metokiData
+];
+
+var distanceData = [
+	{lat: 39.724675, lng: 141.118271},
+	{lat: 39.744673, lng: 141.12913},
+	{lat: 39.783724, lng: 141.148987},
+	{lat: 39.798806, lng: 141.149737},
+	{lat: 39.834552, lng: 141.154068},
+	{lat: 39.874214, lng: 141.173647},
+	{lat: 39.918877, lng: 141.199309},
+	{lat: 39.960345, lng: 141.217333},
+	{lat: 40.00434, lng: 141.23694},
+	{lat: 40.066332, lng: 141.22841},
+	{lat: 40.122771, lng: 141.260182},
+	{lat: 40.171211, lng: 141.308009},
+	{lat: 40.210012, lng: 141.297286},
+	{lat: 40.259728, lng: 141.286034},
+	{lat: 40.285586, lng: 141.290782},
+	{lat: 40.323138, lng: 141.303612},
+	{lat: 40.351967, lng: 141.289556}
+];
+
 function getCurrentPosition() {
+	$.gpsSwitch.setValue(Ti.App.Properties.getBool("switch"));
+	if (!$.gpsSwitch.value) {
+		getScrollItemIndex(Alloy.Globals.currentPage);
+		return;
+	}
 	Ti.Geolocation.getCurrentPosition(function(e) {
 		if (!e.success || e.error) {
 			Ti.UI.createAlertDialog({
 				title: "エラー",
 				message: "位置情報の取得に失敗しました"
-			});
+			}).show();
+			getScrollItemIndex(Alloy.Globals.currentPage);
 			return;
 		}
 		Alloy.Globals.latitude = e.coords.latitude;
 		Alloy.Globals.longitude = e.coords.longitude;
 		Ti.API.debug("緯度：" + e.coords.latitude);
 		Ti.API.debug("経度：" + e.coords.longitude);
+
+		var distanceData2 = [];
+		for (var i = 0; i < distanceData.length; i++) {
+			distanceData2.push(getDistance(distanceData[i].lat, distanceData[i].lng));
+		}
+		var nearDistance;
+		var a, b;
+		for (var i = 0; i < distanceData2.length; i++) {
+			a = distanceData2[i];
+			if (i === 0) {
+				b = a;
+				nearDistance = i;
+			}
+			if (i > 0) {
+				if (a < b) {
+					b = a;
+					nearDistance = i;
+				}
+			}
+		}
+		$.scrollableView.setCurrentPage(nearDistance);
+		getScrollItemIndex(nearDistance);
 	});
 }
 
-function setListPage() {
-	$.scrollableView.setCurrentPage(Alloy.Globals.currentPage);
+function getDistance(lat, lng) {
+	function radians(deg) {
+		return deg * Math.PI / 180;
+	}
+	var distance =  6378.14 * Math.acos(Math.cos(radians(Alloy.Globals.latitude))*
+	Math.cos(radians(lat))*
+	Math.cos(radians(lng)-radians(Alloy.Globals.longitude))+
+	Math.sin(radians(Alloy.Globals.latitude))*
+	Math.sin(radians(lat)));
+	return distance;
 }
 
 function changePage(e) {
 	$.stationName.setText(stations[e.currentPage]);
+	getScrollItemIndex(e.currentPage);
+}
+
+function getScrollItemIndex(e) {
+	var currentStationsData = allSatationsData[e];
+	for (var i = 0; i < currentStationsData.length; i++) {
+		if (currentTime > currentStationsData[currentStationsData.length - 1]) {
+			scrollItemIndex = 0;
+			sectionUpdateItem(e);
+			return;
+		}
+		if (currentTime < currentStationsData[i].rate) {
+			scrollItemIndex = i;
+			sectionUpdateItem(e);
+			return;
+		}
+	}
+}
+
+function sectionUpdateItem(e) {
+	var listSection = $.scrollableView.views[e].sections[0];
+	$.scrollableView.views[e].scrollToItem(0, scrollItemIndex, {animate: true});
+	var listItem = listSection.getItemAt(scrollItemIndex);
+	listItem.time.color = "#FF0000";
+	listSection.updateItemAt(scrollItemIndex, listItem, {animate: true});
+}
+
+function getTime() {
+	var date = new Date();
+	hour = String(date.getHours());
+	minutes = String(date.getMinutes());
+	currentTime = Number(hour + minutes);
+	Ti.API.debug("現在時刻レート：" + currentTime);
 }
 
 function openSelectStation() {
 	var arg = {
 		lineName: $.lineName.text,
-		stations: stations
+		stations: stations,
+		scrollableView: $.scrollableView
 	}
 	var selectWin = Alloy.createController('select', arg).getView();
 	selectWin.open();
 }
 
-function onGPS() {
-
+function onGps() {
+	if (Alloy.Globals.onSetValue) {
+		Alloy.Globals.onSetValue = false;
+		return;
+	}
+	/*
+	if (OS_ANDROID) {
+		Ti.App.Properties.setBool("startUp", false);
+		return;
+	}
+	*/
+	Ti.App.Properties.setBool("switch", $.gpsSwitch.value);
+	if ($.gpsSwitch.value) {
+		alert("GPS機能をONにしました");
+		getCurrentPosition();
+	} else {
+		alert("GPS機能をOFFにしました");
+	}
 }
 
 function closeWin() {
+	Alloy.Globals.onSetValue = true;
 	$.upWin.close();
 }

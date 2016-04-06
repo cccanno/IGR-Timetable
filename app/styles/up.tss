@@ -47,10 +47,11 @@
 
 "#gpsSwitch": {
   right: 50,
-  //backgroundColor: "#FAFAFA",
-  //backgroundSelectedColor: "#6699FF",
   onTintColor: "#6699FF"
-  //thumbTintColor: "#6699FF",
+},
+"#gpsSwitch[platform=android]": {
+  backgroundColor: "#FFFFFF",
+  style: Titanium.UI.Android.SWITCH_STYLE_SWITCH
 }
 
 "#selectStationBtn": {

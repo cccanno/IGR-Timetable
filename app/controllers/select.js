@@ -16,6 +16,7 @@ $.listSection.setItems(listItems);
 
 function focusStationList(e) {
 	Alloy.Globals.currentPage = e.itemIndex;
+	args.scrollableView.setCurrentPage(e.itemIndex);
 	$.selectWin.close();
 }
 

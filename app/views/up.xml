@@ -1,10 +1,10 @@
 <Alloy>
-	<Window id="upWin" onFocus="setListPage" onOpen="getCurrentPosition">
+	<Window id="upWin" onOpen="getCurrentPosition" onFocus="getTime">
 		<View id="navView">
 			<Button id="backBtn" onClick="closeWin" />
 			<Label id="stationName" />
 			<Label id="lineName">上り（盛岡方面）</Label>
-			<Switch id="gpsSwitch" value="true" onChange="onGPS" />
+			<Switch id="gpsSwitch" value="true" onChange="onGps" />
 			<Button id="selectStationBtn" onClick="openSelectStation" />
 		</View>
 		<View id="line" />
