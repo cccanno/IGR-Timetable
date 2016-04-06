@@ -1,4 +1,176 @@
 <Alloy>
-	<View class="container">
-	</View>
+	<Window id="downWin" onOpen="getCurrentPosition" onFocus="getTime">
+		<View id="navView">
+			<Button id="backBtn" onClick="closeWin" />
+			<Label id="stationName" />
+			<Label id="lineName">下り（二戸方面）</Label>
+			<Switch id="gpsSwitch" value="true" onChange="onGps" />
+			<Button id="selectStationBtn" onClick="openSelectStation" />
+		</View>
+		<View id="line" />
+		<ScrollableView id="scrollableView" onScroll="changePage">
+			<ListView class="listView">
+				<Templates>
+					<ItemTemplate name="moriokaTemplate">
+						<Label bindId="time" class="time" />
+						<Label bindId="lastStation" class="lastStation" />
+					</ItemTemplate>
+				</Templates>
+				<ListSection id="moriokaListSection" />
+			</ListView>
+			<ListView class="listView">
+				<Templates>
+					<ItemTemplate name="aoyamaTemplate">
+						<Label bindId="time" class="time" />
+						<Label bindId="lastStation" class="lastStation" />
+					</ItemTemplate>
+				</Templates>
+				<ListSection id="aoyamaListSection" />
+			</ListView>
+			<ListView class="listView">
+				<Templates>
+					<ItemTemplate name="kuriyagawaTemplate">
+						<Label bindId="time" class="time" />
+						<Label bindId="lastStation" class="lastStation" />
+					</ItemTemplate>
+				</Templates>
+				<ListSection id="kuriyagawaListSection" />
+			</ListView>
+			<ListView class="listView">
+				<Templates>
+					<ItemTemplate name="sugoTemplate">
+						<Label bindId="time" class="time" />
+						<Label bindId="lastStation" class="lastStation" />
+					</ItemTemplate>
+				</Templates>
+				<ListSection id="sugoListSection" />
+			</ListView>
+			<ListView class="listView">
+				<Templates>
+					<ItemTemplate name="takizawaTemplate">
+						<Label bindId="time" class="time" />
+						<Label bindId="lastStation" class="lastStation" />
+					</ItemTemplate>
+				</Templates>
+				<ListSection id="takizawaListSection" />
+			</ListView>
+			<ListView class="listView">
+				<Templates>
+					<ItemTemplate name="sibutamiTemplate">
+						<Label bindId="time" class="time" />
+						<Label bindId="lastStation" class="lastStation" />
+					</ItemTemplate>
+				</Templates>
+				<ListSection id="sibutamiListSection" />
+			</ListView>
+			<ListView class="listView">
+				<Templates>
+					<ItemTemplate name="koumaTemplate">
+						<Label bindId="time" class="time" />
+						<Label bindId="lastStation" class="lastStation" />
+					</ItemTemplate>
+				</Templates>
+				<ListSection id="koumaListSection" />
+			</ListView>
+			<ListView class="listView">
+				<Templates>
+					<ItemTemplate name="kawagutiTemplate">
+						<Label bindId="time" class="time" />
+						<Label bindId="lastStation" class="lastStation" />
+					</ItemTemplate>
+				</Templates>
+				<ListSection id="kawagutiListSection" />
+			</ListView>
+			<ListView class="listView">
+				<Templates>
+					<ItemTemplate name="numakunaiTemplate">
+						<Label bindId="time" class="time" />
+						<Label bindId="lastStation" class="lastStation" />
+					</ItemTemplate>
+				</Templates>
+				<ListSection id="numakunaiListSection" />
+			</ListView>
+			<ListView class="listView">
+				<Templates>
+					<ItemTemplate name="midouTemplate">
+						<Label bindId="time" class="time" />
+						<Label bindId="lastStation" class="lastStation" />
+					</ItemTemplate>
+				</Templates>
+				<ListSection id="midouListSection" />
+			</ListView>
+			<ListView class="listView">
+				<Templates>
+					<ItemTemplate name="okunakayamaTemplate">
+						<Label bindId="time" class="time" />
+						<Label bindId="lastStation" class="lastStation" />
+					</ItemTemplate>
+				</Templates>
+				<ListSection id="okunakayamaListSection" />
+			</ListView>
+			<ListView class="listView">
+				<Templates>
+					<ItemTemplate name="kotunagiTemplate">
+						<Label bindId="time" class="time" />
+						<Label bindId="lastStation" class="lastStation" />
+					</ItemTemplate>
+				</Templates>
+				<ListSection id="kotunagiListSection" />
+			</ListView>
+			<ListView class="listView">
+				<Templates>
+					<ItemTemplate name="kozuyaTemplate">
+						<Label bindId="time" class="time" />
+						<Label bindId="lastStation" class="lastStation" />
+					</ItemTemplate>
+				</Templates>
+				<ListSection id="kozuyaListSection" />
+			</ListView>
+			<ListView class="listView">
+				<Templates>
+					<ItemTemplate name="itinoheTemplate">
+						<Label bindId="time" class="time" />
+						<Label bindId="lastStation" class="lastStation" />
+					</ItemTemplate>
+				</Templates>
+				<ListSection id="itinoheListSection" />
+			</ListView>
+			<ListView class="listView">
+				<Templates>
+					<ItemTemplate name="ninoheTemplate">
+						<Label bindId="time" class="time" />
+						<Label bindId="lastStation" class="lastStation" />
+					</ItemTemplate>
+				</Templates>
+				<ListSection id="ninoheListSection" />
+			</ListView>
+			<ListView class="listView">
+				<Templates>
+					<ItemTemplate name="tomaiTemplate">
+						<Label bindId="time" class="time" />
+						<Label bindId="lastStation" class="lastStation" />
+					</ItemTemplate>
+				</Templates>
+				<ListSection id="tomaiListSection" />
+			</ListView>
+			<ListView class="listView">
+				<Templates>
+					<ItemTemplate name="kintaitiTemplate">
+						<Label bindId="time" class="time" />
+						<Label bindId="lastStation" class="lastStation" />
+					</ItemTemplate>
+				</Templates>
+				<ListSection id="kintaitiListSection" />
+			</ListView>
+			<ListView class="listView">
+				<Templates>
+					<ItemTemplate name="metokiTemplate">
+						<Label bindId="time" class="time" />
+						<Label bindId="lastStation" class="lastStation" />
+					</ItemTemplate>
+				</Templates>
+				<ListSection id="metokiListSection" />
+			</ListView>
+		</ScrollableView>
+	</Window>
 </Alloy>
