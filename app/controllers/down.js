@@ -5,6 +5,12 @@ var hour, minutes;
 var scrollItemIndex;
 var onSetValue = false;
 
+var date = new Date();
+hour = String(date.getHours());
+minutes = String(date.getMinutes());
+currentTime = Number(hour + minutes);
+Ti.API.debug("現在時刻レート：" + currentTime);
+
 var stations = [
 	"盛岡駅",
 	"青山駅",
@@ -657,11 +663,11 @@ function changePage(e) {
 
 function getScrollItemIndex(e) {
 	var currentStationsData = allSatationsData[e];
-		if (currentTime > currentStationsData[currentStationsData.length - 1]) {
-			scrollItemIndex = 0;
-			sectionUpdateItem(e);
-			return;
-		}
+	if (currentTime > currentStationsData[currentStationsData.length - 1].rate) {
+		scrollItemIndex = 0;
+		sectionUpdateItem(e);
+		return;
+	}
 	for (var i = 0; i < currentStationsData.length; i++) {
 		if (currentTime < currentStationsData[i].rate) {
 			scrollItemIndex = i;
@@ -681,7 +687,7 @@ function sectionUpdateItem(e) {
 }
 
 function getTime() {
-	var date = new Date();
+	date = new Date();
 	hour = String(date.getHours());
 	minutes = String(date.getMinutes());
 	currentTime = Number(hour + minutes);
