@@ -51,6 +51,7 @@
 	font: {
 		fontSize: 14
 	},
+	backgroundColor: "transparent",
 	right: 5,
 	bottom: 5,
 	width: Ti.UI.SIZE,

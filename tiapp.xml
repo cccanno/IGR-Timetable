@@ -1,47 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?><ti:app xmlns:ti="http://ti.appcelerator.org">
-  <id>com.canno.igr</id>
-  <name>IGR-Timetable</name>
-  <version>1.3.0</version>
-  <publisher>Yuma Kanno</publisher>
-  <url/>
-  <description/>
-  <copyright>@ 2016 Yuma Kanno</copyright>
-  <icon>appicon.png</icon>
-  <fullscreen>true</fullscreen>
-  <navbar-hidden>true</navbar-hidden>
-  <analytics>true</analytics>
-  <guid>72f22a3d-3adc-4d00-9934-8bfe877c3b8d</guid>
-  <property name="ti.ui.defaultunit" type="string">dp</property>
-  <ios>
-    <enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>
-    <default-background-color>#FFFCFA</default-background-color>
-    <plist>
-      <dict>
-        <key>NSLocationWhenInUseUsageDescription</key>
-        <string></string>
-        <key>UISupportedInterfaceOrientations~iphone</key>
-        <array>
-          <string>UIInterfaceOrientationPortrait</string>
-        </array>
-        <key>UISupportedInterfaceOrientations~ipad</key>
-        <array>
-          <string>UIInterfaceOrientationPortrait</string>
-          <string>UIInterfaceOrientationPortraitUpsideDown</string>
-          <string>UIInterfaceOrientationLandscapeLeft</string>
-          <string>UIInterfaceOrientationLandscapeRight</string>
-        </array>
-        <key>UIRequiresPersistentWiFi</key>
-        <false/>
-        <key>UIPrerenderedIcon</key>
-        <false/>
-        <key>UIStatusBarHidden</key>
-        <false/>
-        <key>UIStatusBarStyle</key>
-        <string>UIStatusBarStyleDefault</string>
-      </dict>
-    </plist>
-  </ios>
-  <android xmlns:android="http://schemas.android.com/apk/res/android">
+<id>com.canno.igr</id>
+<name>IGR-Timetable</name>
+<version>1.3.0</version>
+<publisher>Yuma Kanno</publisher>
+<url/>
+<description/>
+<copyright>@ 2016 Yuma Kanno</copyright>
+<icon>appicon.png</icon>
+<fullscreen>true</fullscreen>
+<navbar-hidden>true</navbar-hidden>
+<analytics>true</analytics>
+<guid>72f22a3d-3adc-4d00-9934-8bfe877c3b8d</guid>
+<property name="ti.ui.defaultunit" type="string">dp</property>
+<ios>
+  <enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>
+  <default-background-color>#FFFCFA</default-background-color>
+  <plist>
+    <dict>
+      <key>NSLocationWhenInUseUsageDescription</key>
+      <string></string>
+      <key>UISupportedInterfaceOrientations~iphone</key>
+      <array>
+        <string>UIInterfaceOrientationPortrait</string>
+      </array>
+      <key>UISupportedInterfaceOrientations~ipad</key>
+      <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationPortraitUpsideDown</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+      </array>
+      <key>UIRequiresPersistentWiFi</key>
+      <false/>
+      <key>UIPrerenderedIcon</key>
+      <false/>
+      <key>UIStatusBarHidden</key>
+      <false/>
+      <key>UIStatusBarStyle</key>
+      <string>UIStatusBarStyleDefault</string>
+    </dict>
+  </plist>
+</ios>
+<android xmlns:android="http://schemas.android.com/apk/res/android">
+  <manifest android:versionCode="8" android:versionName="1.3.0">
+    <application>
+      <meta-data android:name="com.google.android.maps.v2.API_KEY"
+        android:value="AIzaSyCmUfz48jOhXc8u3XuwOQZvdfdalUPpE8k"/>
+      </application>
+    </manifest>
   </android>
   <mobileweb>
     <precache>
@@ -65,5 +71,5 @@
   </deployment-targets>
   <sdk-version>5.2.1.GA</sdk-version>
   <plugins><plugin version="1.0">ti.alloy</plugin>
-  </plugins>
+</plugins>
 </ti:app>
