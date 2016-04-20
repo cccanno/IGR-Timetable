@@ -7,7 +7,11 @@ var onSetValue = false;
 
 var date = new Date();
 hour = String(date.getHours());
-minutes = String(date.getMinutes());
+if (date.getMinutes() < 10) {
+	minutes = "0" + date.getMinutes();
+} else {
+	minutes = String(date.getMinutes());
+}
 currentTime = Number(hour + minutes);
 Ti.API.debug("現在時刻レート：" + currentTime);
 
