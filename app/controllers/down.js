@@ -13,7 +13,6 @@ if (date.getMinutes() < 10) {
 	minutes = String(date.getMinutes());
 }
 currentTime = Number(hour + minutes);
-Ti.API.debug("現在時刻レート：" + currentTime);
 
 var stations = [
 	"盛岡駅",
@@ -621,8 +620,6 @@ function getCurrentPosition() {
 		}
 		Alloy.Globals.latitude = e.coords.latitude;
 		Alloy.Globals.longitude = e.coords.longitude;
-		Ti.API.debug("緯度：" + e.coords.latitude);
-		Ti.API.debug("経度：" + e.coords.longitude);
 
 		var distanceData2 = [];
 		for (var i = 0; i < distanceData.length; i++) {
@@ -682,7 +679,6 @@ function getScrollItemIndex(e) {
 }
 
 function sectionUpdateItem(e) {
-	Ti.API.debug("スクロールindex：" + scrollItemIndex);
 	var listSection = $.scrollableView.views[e].sections[0];
 	$.scrollableView.views[e].scrollToItem(0, scrollItemIndex, {animate: true});
 	var listItem = listSection.getItemAt(scrollItemIndex);
@@ -695,7 +691,6 @@ function getTime() {
 	hour = String(date.getHours());
 	minutes = String(date.getMinutes());
 	currentTime = Number(hour + minutes);
-	Ti.API.debug("現在時刻レート：" + currentTime);
 }
 
 function openSelectStation() {
