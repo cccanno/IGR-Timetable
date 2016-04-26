@@ -1,5 +1,5 @@
 <Alloy>
-	<Window id="upWin" onOpen="getCurrentPosition" onFocus="getTime">
+	<Window id="upWin" onOpen="getCurrentPosition">
 		<View id="navView">
 			<Button id="backBtn" onClick="closeWin" />
 			<Label id="stationName" />

@@ -733,17 +733,6 @@ function getTimeLag(e) {
 	}
 }
 
-function getTime() {
-	date = new Date();
-	hour = String(date.getHours());
-	if (date.getMinutes() < 10) {
-		minutes = "0" + date.getMinutes();
-	} else {
-		minutes = String(date.getMinutes());
-	}
-	currentTime = Number(hour + minutes);
-}
-
 function openSelectStation() {
 	var arg = {
 		lineName: $.lineName.text,
