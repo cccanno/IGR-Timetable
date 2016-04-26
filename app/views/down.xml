@@ -14,6 +14,7 @@
 					<ItemTemplate name="moriokaTemplate">
 						<Label bindId="time" class="time" />
 						<Label bindId="lastStation" class="lastStation" />
+						<Label bindId="lag" class="lag" />
 					</ItemTemplate>
 				</Templates>
 				<ListSection id="moriokaListSection" />
@@ -23,6 +24,7 @@
 					<ItemTemplate name="aoyamaTemplate">
 						<Label bindId="time" class="time" />
 						<Label bindId="lastStation" class="lastStation" />
+						<Label bindId="lag" class="lag" />
 					</ItemTemplate>
 				</Templates>
 				<ListSection id="aoyamaListSection" />
@@ -32,6 +34,7 @@
 					<ItemTemplate name="kuriyagawaTemplate">
 						<Label bindId="time" class="time" />
 						<Label bindId="lastStation" class="lastStation" />
+						<Label bindId="lag" class="lag" />
 					</ItemTemplate>
 				</Templates>
 				<ListSection id="kuriyagawaListSection" />
@@ -41,6 +44,7 @@
 					<ItemTemplate name="sugoTemplate">
 						<Label bindId="time" class="time" />
 						<Label bindId="lastStation" class="lastStation" />
+						<Label bindId="lag" class="lag" />
 					</ItemTemplate>
 				</Templates>
 				<ListSection id="sugoListSection" />
@@ -50,6 +54,7 @@
 					<ItemTemplate name="takizawaTemplate">
 						<Label bindId="time" class="time" />
 						<Label bindId="lastStation" class="lastStation" />
+						<Label bindId="lag" class="lag" />
 					</ItemTemplate>
 				</Templates>
 				<ListSection id="takizawaListSection" />
@@ -59,6 +64,7 @@
 					<ItemTemplate name="sibutamiTemplate">
 						<Label bindId="time" class="time" />
 						<Label bindId="lastStation" class="lastStation" />
+						<Label bindId="lag" class="lag" />
 					</ItemTemplate>
 				</Templates>
 				<ListSection id="sibutamiListSection" />
@@ -68,6 +74,7 @@
 					<ItemTemplate name="koumaTemplate">
 						<Label bindId="time" class="time" />
 						<Label bindId="lastStation" class="lastStation" />
+						<Label bindId="lag" class="lag" />
 					</ItemTemplate>
 				</Templates>
 				<ListSection id="koumaListSection" />
@@ -77,6 +84,7 @@
 					<ItemTemplate name="kawagutiTemplate">
 						<Label bindId="time" class="time" />
 						<Label bindId="lastStation" class="lastStation" />
+						<Label bindId="lag" class="lag" />
 					</ItemTemplate>
 				</Templates>
 				<ListSection id="kawagutiListSection" />
@@ -86,6 +94,7 @@
 					<ItemTemplate name="numakunaiTemplate">
 						<Label bindId="time" class="time" />
 						<Label bindId="lastStation" class="lastStation" />
+						<Label bindId="lag" class="lag" />
 					</ItemTemplate>
 				</Templates>
 				<ListSection id="numakunaiListSection" />
@@ -95,6 +104,7 @@
 					<ItemTemplate name="midouTemplate">
 						<Label bindId="time" class="time" />
 						<Label bindId="lastStation" class="lastStation" />
+						<Label bindId="lag" class="lag" />
 					</ItemTemplate>
 				</Templates>
 				<ListSection id="midouListSection" />
@@ -104,6 +114,7 @@
 					<ItemTemplate name="okunakayamaTemplate">
 						<Label bindId="time" class="time" />
 						<Label bindId="lastStation" class="lastStation" />
+						<Label bindId="lag" class="lag" />
 					</ItemTemplate>
 				</Templates>
 				<ListSection id="okunakayamaListSection" />
@@ -113,6 +124,7 @@
 					<ItemTemplate name="kotunagiTemplate">
 						<Label bindId="time" class="time" />
 						<Label bindId="lastStation" class="lastStation" />
+						<Label bindId="lag" class="lag" />
 					</ItemTemplate>
 				</Templates>
 				<ListSection id="kotunagiListSection" />
@@ -122,6 +134,7 @@
 					<ItemTemplate name="kozuyaTemplate">
 						<Label bindId="time" class="time" />
 						<Label bindId="lastStation" class="lastStation" />
+						<Label bindId="lag" class="lag" />
 					</ItemTemplate>
 				</Templates>
 				<ListSection id="kozuyaListSection" />
@@ -131,6 +144,7 @@
 					<ItemTemplate name="itinoheTemplate">
 						<Label bindId="time" class="time" />
 						<Label bindId="lastStation" class="lastStation" />
+						<Label bindId="lag" class="lag" />
 					</ItemTemplate>
 				</Templates>
 				<ListSection id="itinoheListSection" />
@@ -140,6 +154,7 @@
 					<ItemTemplate name="ninoheTemplate">
 						<Label bindId="time" class="time" />
 						<Label bindId="lastStation" class="lastStation" />
+						<Label bindId="lag" class="lag" />
 					</ItemTemplate>
 				</Templates>
 				<ListSection id="ninoheListSection" />
@@ -149,6 +164,7 @@
 					<ItemTemplate name="tomaiTemplate">
 						<Label bindId="time" class="time" />
 						<Label bindId="lastStation" class="lastStation" />
+						<Label bindId="lag" class="lag" />
 					</ItemTemplate>
 				</Templates>
 				<ListSection id="tomaiListSection" />
@@ -158,6 +174,7 @@
 					<ItemTemplate name="kintaitiTemplate">
 						<Label bindId="time" class="time" />
 						<Label bindId="lastStation" class="lastStation" />
+						<Label bindId="lag" class="lag" />
 					</ItemTemplate>
 				</Templates>
 				<ListSection id="kintaitiListSection" />
@@ -167,6 +184,7 @@
 					<ItemTemplate name="metokiTemplate">
 						<Label bindId="time" class="time" />
 						<Label bindId="lastStation" class="lastStation" />
+						<Label bindId="lag" class="lag" />
 					</ItemTemplate>
 				</Templates>
 				<ListSection id="metokiListSection" />

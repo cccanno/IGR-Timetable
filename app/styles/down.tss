@@ -108,3 +108,13 @@
   width: "60%",
   height: Ti.UI.SIZE
 }
+
+".lag": {
+  right: 20,
+  color: "#6565ff",
+  font: {
+    fontSize: 14
+  },
+  width: "60%",
+  height: Ti.UI.SIZE
+}
