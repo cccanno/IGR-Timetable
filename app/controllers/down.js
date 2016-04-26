@@ -3,7 +3,7 @@ var args = $.args;
 var currentTime;
 var hour, minutes;
 var scrollItemIndex;
-var onSetValue = false;
+var firstSwitch = true;
 
 var date = new Date();
 hour = String(date.getHours());
@@ -609,6 +609,7 @@ function getCurrentPosition() {
 		getScrollItemIndex(Alloy.Globals.currentPage);
 		return;
 	}
+	firstSwitch = false;
 	Ti.Geolocation.getCurrentPosition(function(e) {
 		if (!e.success || e.error) {
 			Ti.UI.createAlertDialog({
@@ -692,7 +693,7 @@ function getTimeLag(e) {
 	var currentHour = Number(hour);
 	var currentMinutes = Number(minutes);
 	for (var i = scrollItemIndex; i < (scrollItemIndex + 3); i++) {
-		if(listSection.getItemAt(i) == null) {
+		if(listSection.getItemAt(i) == null || listSection.getItemAt(i) == undefined) {
 			return;
 		}
 		var listItem = listSection.getItemAt(i);
@@ -714,7 +715,7 @@ function getTimeLag(e) {
 			timeLagLabel = hourLag + "時間" + minutesLag + "分";
 		}
 		listItem.properties = {
-			height: 80
+			height: 90
 		}
 		listItem.time.font = {
 			fontSize: 32
@@ -754,16 +755,12 @@ function openSelectStation() {
 }
 
 function onGps() {
-	if (Alloy.Globals.onSetValue) {
-		Alloy.Globals.onSetValue = false;
+	if (firstSwitch == true && $.gpsSwitch.value == false) {
+		firstSwitch = false;
+		Ti.App.Properties.setBool("switch", $.gpsSwitch.value);
 		return;
 	}
-	/*
-	if (OS_ANDROID) {
-		Ti.App.Properties.setBool("startUp", false);
-		return;
-	}
-	*/
+	firstSwitch = false;
 	Ti.App.Properties.setBool("switch", $.gpsSwitch.value);
 	if ($.gpsSwitch.value) {
 		alert("GPS機能をONにしました");
@@ -774,6 +771,5 @@ function onGps() {
 }
 
 function closeWin() {
-	Alloy.Globals.onSetValue = true;
 	$.downWin.close();
 }

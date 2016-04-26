@@ -83,10 +83,14 @@
   backgroundColor: "#FFFFFF"
 }
 
-"ItemTemplate": {
-  height: 50,
+"ItemTemplate[platform=ios]": {
+  height: 60,
   backgroundColor: "#FFFFFF",
   selectionStyle: Titanium.UI.iPhone.ListViewCellSelectionStyle.NONE
+},
+"ItemTemplate[platform=android]": {
+  height: 60,
+  backgroundColor: "#FFFFFF"
 }
 
 ".time": {

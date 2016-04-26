@@ -15,9 +15,6 @@ Alloy.Globals.Map = require('ti.map');
 Alloy.Globals.latitude = 39.702053;
 Alloy.Globals.longitude = 141.154484;
 
-Alloy.Globals.onSetValue = false;
 if (Ti.App.Properties.getBool("switch") == null) {
 	Ti.App.Properties.setBool("switch", true);
-} else if (Ti.App.Properties.getBool("switch") == false) {
-	Alloy.Globals.onSetValue = true;
 }
