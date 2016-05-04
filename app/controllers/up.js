@@ -112,7 +112,6 @@ var kuriyagawaData = [
 	{template: "kuriyagawaTemplate", time: {text: "18:29"}, lastStation: {text: "[花]盛岡"}, rate: 1829, lag: {}},
 	{template: "kuriyagawaTemplate", time: {text: "18:42"}, lastStation: {text: "盛岡"}, rate: 1842, lag: {}},
 	{template: "kuriyagawaTemplate", time: {text: "18:53"}, lastStation: {text: "盛岡"}, rate: 1853, lag: {}},
-	{template: "kuriyagawaTemplate", time: {text: "18:53"}, lastStation: {text: "盛岡"}, rate: 1853, lag: {}},
 	{template: "kuriyagawaTemplate", time: {text: "19:06"}, lastStation: {text: "盛岡 ＊土休日運休"}, rate: 1906, lag: {}},
 	{template: "kuriyagawaTemplate", time: {text: "19:22"}, lastStation: {text: "盛岡"}, rate: 1922, lag: {}},
 	{template: "kuriyagawaTemplate", time: {text: "20:02"}, lastStation: {text: "盛岡"}, rate: 2002, lag: {}},
