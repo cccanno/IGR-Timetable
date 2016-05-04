@@ -42,7 +42,7 @@
   </plist>
 </ios>
 <android xmlns:android="http://schemas.android.com/apk/res/android">
-  <manifest android:versionCode="9" android:versionName="1.4.0">
+  <manifest android:versionCode="10" android:versionName="1.4.1">
     <application>
       <meta-data android:name="com.google.android.maps.v2.API_KEY"
         android:value="AIzaSyCmUfz48jOhXc8u3XuwOQZvdfdalUPpE8k"/>
