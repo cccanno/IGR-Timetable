@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><ti:app xmlns:ti="http://ti.appcelerator.org">
-<id>com.canno.igr2</id>
+<id>com.canno.igr</id>
 <name>IGR-Timetable</name>
-<version>1.4.1</version>
+<version>1.5.0</version>
 <publisher>Yuma Kanno</publisher>
 <url/>
 <description/>
@@ -42,7 +42,7 @@
   </plist>
 </ios>
 <android xmlns:android="http://schemas.android.com/apk/res/android">
-  <manifest android:versionCode="10" android:versionName="1.4.1">
+  <manifest android:versionCode="11" android:versionName="1.5.0">
     <application>
       <meta-data android:name="com.google.android.maps.v2.API_KEY"
         android:value="AIzaSyCmUfz48jOhXc8u3XuwOQZvdfdalUPpE8k"/>
@@ -69,7 +69,7 @@
     <target device="mobileweb">false</target>
     <target device="windows">false</target>
   </deployment-targets>
-  <sdk-version>5.2.1.GA</sdk-version>
+  <sdk-version>5.2.0.GA</sdk-version>
   <plugins><plugin version="1.0">ti.alloy</plugin>
 </plugins>
 </ti:app>
