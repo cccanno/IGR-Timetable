@@ -1,0 +1,64 @@
+".scrollContainer": {
+	layout: "vertical",
+	contentWidth: Ti.UI.SIZE,
+	horizontalWrap: true
+},
+".scrollContainer[platform=ios]": {
+	// horizontalBounce: false
+},
+".scrollContainer[platform=android]": {
+	scrollType: "vertical"
+}
+
+".horizontalContainer": {
+	top: 10,
+	left: 10,
+	right: 10,
+	width: Ti.UI.FILL,
+	height: 50,
+	borderColor: "#FFFFFF",
+	borderRadius: 7,
+	backgroundColor: "#FFFFFF",
+	bubbleParent: false
+}
+
+".checkLabel": {
+	left: 15,
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	font: {
+		fontSize: 18
+	},
+	color: "#333333"
+}
+
+".checkImage": {
+	backgroundImage: "/icons/checkOff.png",
+	right: 15,
+	width: 30,
+	height: 30,
+	backgroundColor: "#FFFFFF"
+}
+
+/* 運行情報 */
+
+"#travelInformationContainer": {
+	top: 20,
+	left: 10,
+	right: 10,
+	width: Ti.UI.FILL,
+	height: 50,
+	borderColor: "#6699FF",
+	borderRadius: 7,
+	backgroundColor: "#6699FF",
+	bubbleParent: false
+}
+
+"#travelInformationLabel": {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	font: {
+		fontSize: 20
+	},
+	color: "#FFFFFF"
+}
