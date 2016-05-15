@@ -1,0 +1,16 @@
+<Alloy>
+	<Window id="stationMapWin" onFocus="moveCurrentPosition">
+		<View class="container">
+
+			<!-- ナビゲーションView -->
+			<View class="navContainer">
+				<Label class="navTitle">マップ</Label>
+			</View>
+			<View class="borderLine" />
+
+			<!-- 駅マップ -->
+			<View id="mapView" module="ti.map" />
+
+		</View>
+	</Window>
+</Alloy>

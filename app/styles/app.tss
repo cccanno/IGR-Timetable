@@ -24,3 +24,160 @@ overrode the settings with other TSS, XML, or JS settings:
 }
 
 */
+
+
+/* 全画面共通レイアウト */
+
+"Window": {
+  width: Ti.UI.FILL,
+  height: Ti.UI.FILL,
+  backgroundColor: "#FAFAFA",
+	navBarHidden: true
+},
+"Window[platform=ios]": {
+},
+"Window[platform=android]": {
+	exitOnClose: true
+}
+
+".container": {
+  width: Ti.UI.FILL,
+  height: Ti.UI.FILL,
+  backgroundColor: "#FAFAFA",
+	layout: "vertical"
+}
+
+
+/* 時刻表画面 - 駅名スクロールタブ */
+
+".stationNameTabLine": {
+	top: 63,
+	width: Ti.UI.FILL,
+	height: 7,
+	backgroundColor: "#FFFFFF",
+	zIndex: 1
+}
+
+".stationNameTabScrollContainer": {
+	width: Ti.UI.FILL,
+	height: 50,
+	top: 20,
+	backgroundColor: "#FAFAFA",
+	layout: "horizontal",
+	contentWidth: Ti.UI.SIZE,
+	horizontalWrap: false
+},
+".stationNameTabScrollContainer[platform=ios]": {
+	disableBounce: true
+},
+".stationNameTabScrollContainer[platform=android]": {
+	scrollType: "horizontal"
+}
+
+".stationNameContainer": {
+	left: 0,
+	backgroundColor: "#FAFAFA",
+	borderColor: "#FAFAFA",
+	borderRadius: 5,
+  height: Ti.UI.FILL,
+	width: Ti.UI.SIZE
+}
+
+".stationName": {
+	right: 10,
+	left: 10,
+	width: Ti.UI.SIZE,
+  height: "100%",
+	font: {
+		fontSize: 18,
+		fontWeight: "bold"
+	},
+	color: "#333333",
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}
+
+
+/* 時刻表画面 - 時刻表 */
+
+".timetableScrollableContainer": {
+  width: Ti.UI.FILL,
+  height: Ti.UI.FILL,
+  backgroundColor: "#FFFFFF"
+}
+
+".timetableList": {
+  separatorColor: "#E6E6E6",
+  width: Ti.UI.FILL,
+  height: Ti.UI.FILL,
+  bubbleParent: false,
+  backgroundColor: "#FFFFFF"
+},
+".timetableList[platform=ios]": {
+	separatorInsets: { right: 0, left: 0 }
+}
+
+"ItemTemplate": {
+  height: 50,
+  backgroundColor: "#FFFFFF",
+},
+"ItemTemplate[platform=ios]": {
+  selectionStyle: Titanium.UI.iPhone.ListViewCellSelectionStyle.NONE
+}
+
+".time": {
+  left: 15,
+  color: "#333333",
+  font: {
+    fontSize: 20
+  },
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE
+}
+
+".lastStation": {
+  right: 20,
+  color: "#008000",
+  font: {
+    fontSize: 14
+  },
+  width: "60%",
+  height: Ti.UI.SIZE
+}
+
+".lag": {
+  right: 20,
+  color: "#6565ff",
+  font: {
+    fontSize: 14
+  },
+  width: "60%",
+  height: Ti.UI.SIZE
+}
+
+
+/* 地図・設定画面 */
+
+".navContainer": {
+  width: Ti.UI.FILL,
+  height: 50,
+  backgroundColor: "#FAFAFA"
+},
+".navContainer[platform=ios]": {
+  top: 20,
+}
+
+".navTitle": {
+  color: "#333333",
+  font: {
+    fontSize: 24,
+    fontWeight: "bold"
+  },
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE
+}
+
+".borderLine": {
+  width: Ti.UI.FILL,
+  height: 1,
+  borderColor: "#e6e6e6"
+}
