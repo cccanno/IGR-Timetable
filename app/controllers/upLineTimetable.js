@@ -776,8 +776,4 @@ function setTabCenter(index) {
   } else {
     $.stationNameTabScroll.scrollTo(scrollToXTab, 0);
   }
-
-  if (index < 5) {
-    $.stationNameTabScroll.scrollToBottom();
-  }
 };
