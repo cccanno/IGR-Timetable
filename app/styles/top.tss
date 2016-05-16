@@ -6,7 +6,8 @@
 },
 "TabGroup[platform=android]": {
   tabsBackgroundSelectedColor: "#FFFFFF",
-  exitOnClose: true
+  exitOnClose: true,
+  title: ""
 }
 
 "Tab": {

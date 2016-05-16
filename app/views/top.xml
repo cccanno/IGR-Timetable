@@ -1,16 +1,16 @@
 <Alloy>
-	<TabGroup>
-		<Tab title="上り線" icon="/icons/tabIcons/upLineTimetable.png">
-			<Require type="view" src="upLineTimetable" />
-		</Tab>
-		<Tab title="下り線" icon="/icons/tabIcons/downLineTimetable.png">
-			<Require type="view" src="downLineTimetable" />
-		</Tab>
-		<Tab title="マップ" icon="/icons/tabIcons/stationMap.png">
-			<Require type="view" src="stationMap" />
-		</Tab>
-		<Tab title="設定" icon="/icons/tabIcons/setting.png">
-			<Require type="view" src="setting" />
-		</Tab>
-	</TabGroup>
+  <TabGroup>
+    <Tab title="上り線" icon="/icons/tabIcons/upLineTimetable.png">
+      <Require type="view" src="upLineTimetable" />
+    </Tab>
+    <Tab title="下り線" icon="/icons/tabIcons/downLineTimetable.png">
+      <Require type="view" src="downLineTimetable" />
+    </Tab>
+    <Tab title="マップ" icon="/icons/tabIcons/stationMap.png">
+      <Require type="view" src="stationMap" />
+    </Tab>
+    <Tab title="設定" icon="/icons/tabIcons/setting.png">
+      <Require type="view" src="setting" />
+    </Tab>
+  </TabGroup>
 </Alloy>

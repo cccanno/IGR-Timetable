@@ -32,7 +32,7 @@ overrode the settings with other TSS, XML, or JS settings:
   width: Ti.UI.FILL,
   height: Ti.UI.FILL,
   backgroundColor: "#FAFAFA",
-	navBarHidden: true
+	navBarHidden: true,
 },
 "Window[platform=ios]": {
 },
