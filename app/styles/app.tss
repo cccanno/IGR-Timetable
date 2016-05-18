@@ -32,67 +32,67 @@ overrode the settings with other TSS, XML, or JS settings:
   width: Ti.UI.FILL,
   height: Ti.UI.FILL,
   backgroundColor: "#FAFAFA",
-	navBarHidden: true,
+  navBarHidden: true
 },
 "Window[platform=ios]": {
 },
 "Window[platform=android]": {
-	exitOnClose: true
+  exitOnClose: true
 }
 
 ".container": {
   width: Ti.UI.FILL,
   height: Ti.UI.FILL,
   backgroundColor: "#FAFAFA",
-	layout: "vertical"
+  layout: "vertical"
 }
 
 
 /* 時刻表画面 - 駅名スクロールタブ */
 
 ".stationNameTabLine": {
-	top: 63,
-	width: Ti.UI.FILL,
-	height: 7,
-	backgroundColor: "#FFFFFF",
-	zIndex: 1
+  top: 63,
+  width: Ti.UI.FILL,
+  height: 7,
+  backgroundColor: "#FFFFFF",
+  zIndex: 1
 }
 
 ".stationNameTabScrollContainer": {
-	width: Ti.UI.FILL,
-	height: 50,
-	top: 20,
-	backgroundColor: "#FAFAFA",
-	layout: "horizontal",
-	contentWidth: Ti.UI.SIZE,
-	horizontalWrap: false
+  width: Ti.UI.FILL,
+  height: 50,
+  top: 20,
+  backgroundColor: "#FAFAFA",
+  layout: "horizontal",
+  contentWidth: Ti.UI.SIZE,
+  horizontalWrap: false
 },
 ".stationNameTabScrollContainer[platform=ios]": {
-	disableBounce: true
+  disableBounce: true
 },
 ".stationNameTabScrollContainer[platform=android]": {
-	scrollType: "horizontal"
+  scrollType: "horizontal"
 }
 
 ".stationNameContainer": {
-	left: 0,
-	backgroundColor: "#FAFAFA",
-	borderColor: "#FAFAFA",
-	borderRadius: 5,
+  left: 0,
+  backgroundColor: "#FAFAFA",
+  borderColor: "#FAFAFA",
+  borderRadius: 5,
   height: Ti.UI.FILL,
-	width: Ti.UI.SIZE
+  width: Ti.UI.SIZE
 }
 
 ".stationName": {
-	right: 10,
-	left: 10,
-	width: Ti.UI.SIZE,
+  right: 10,
+  left: 10,
+  width: Ti.UI.SIZE,
   height: "100%",
-	font: {
-		fontSize: 18,
-		fontWeight: "bold"
-	},
-	color: "#333333",
+  font: {
+    fontSize: 18,
+    fontWeight: "bold"
+  },
+  color: "#333333",
   textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
 }
 
@@ -113,7 +113,7 @@ overrode the settings with other TSS, XML, or JS settings:
   backgroundColor: "#FFFFFF"
 },
 ".timetableList[platform=ios]": {
-	separatorInsets: { right: 0, left: 0 }
+  separatorInsets: { right: 0, left: 0 }
 }
 
 "ItemTemplate": {
