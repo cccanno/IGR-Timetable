@@ -1,5 +1,6 @@
 "TabGroup": {
-  tabsBackgroundColor: "#FAFAFA"
+  tabsBackgroundColor: "#FAFAFA",
+  title: null
 },
 "TabGroup[platform=ios]": {
   tabsTintColor: "#6699FF"
