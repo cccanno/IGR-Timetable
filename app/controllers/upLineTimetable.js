@@ -8,7 +8,6 @@ var scrollPage = 0;
 var clickedTab = undefined;
 var currentTab;
 
-
 var date = new Date();
 hour = String(date.getHours());
 if (date.getMinutes() < 10) {

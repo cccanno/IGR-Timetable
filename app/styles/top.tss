@@ -1,13 +1,13 @@
 "TabGroup": {
-  tabsBackgroundColor: "#FAFAFA"
+  tabsBackgroundColor: "#FAFAFA",
+  title: null
 },
 "TabGroup[platform=ios]": {
   tabsTintColor: "#6699FF"
 },
 "TabGroup[platform=android]": {
   tabsBackgroundSelectedColor: "#FFFFFF",
-  exitOnClose: true,
-  title: ""
+  exitOnClose: true
 }
 
 "Tab": {
