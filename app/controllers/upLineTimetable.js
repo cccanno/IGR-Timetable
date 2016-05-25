@@ -202,6 +202,7 @@ var takizawaData = [
   {template: "takizawaTemplate", time: {text: "16:11"}, lastStation: {text: "[花]盛岡"}, rate: 1611, lag: {}},
   {template: "takizawaTemplate", time: {text: "16:38"}, lastStation: {text: "盛岡"}, rate: 1638, lag: {}},
   {template: "takizawaTemplate", time: {text: "17:00"}, lastStation: {text: "盛岡"}, rate: 1700, lag: {}},
+  {template: "takizawaTemplate", time: {text: "17:40"}, lastStation: {text: "盛岡"}, rate: 1740, lag: {}},
   {template: "takizawaTemplate", time: {text: "18:21"}, lastStation: {text: "[花]盛岡"}, rate: 1821, lag: {}},
   {template: "takizawaTemplate", time: {text: "18:35"}, lastStation: {text: "盛岡"}, rate: 1835, lag: {}},
   {template: "takizawaTemplate", time: {text: "18:46"}, lastStation: {text: "盛岡"}, rate: 1846, lag: {}},
