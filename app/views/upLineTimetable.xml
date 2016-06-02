@@ -1,237 +1,237 @@
 <Alloy>
-	<Window id="upLineTimetableWin" onFocus="showNearStationTab">
-		<View id="stationNameTabLine" class="stationNameTabLine" />
-		<View class="container">
+  <Window id="upLineTimetableWin" onFocus="showNearStationTab">
+    <View id="stationNameTabLine" class="stationNameTabLine" />
+    <View class="container">
 
-			<!-- 駅名スクロールタブ -->
-			<ScrollView id="stationNameTabScroll" class="stationNameTabScrollContainer">
-				<View class="stationNameContainer" number="0">
-					<Label class="stationName" text="青山駅" color="#7b9ad0" />
-				</View>
-				<View class="stationNameContainer" number="1">
-					<Label class="stationName" text="厨川駅" color="#f8e352" />
-				</View>
-				<View class="stationNameContainer" number="2">
-					<Label class="stationName" text="巣子駅" color="#c8d627" />
-				</View>
-				<View class="stationNameContainer" number="3">
-					<Label class="stationName" text="滝沢駅" color="#d5848b" />
-				</View>
-				<View class="stationNameContainer" number="4">
-					<Label class="stationName" text="渋民駅" color="#e5ab47" />
-				</View>
-				<View class="stationNameContainer" number="5">
-					<Label class="stationName" text="好摩駅" color="#e1cea3" />
-				</View>
-				<View class="stationNameContainer" number="6">
-					<Label class="stationName" text="岩手川口駅" color="#51a1a2" />
-				</View>
-				<View class="stationNameContainer" number="7">
-					<Label class="stationName" text="いわて沼宮内駅" color="#b1d7e4" />
-				</View>
-				<View class="stationNameContainer" number="8">
-					<Label class="stationName" text="御堂駅" color="#66b7ec" />
-				</View>
-				<View class="stationNameContainer" number="9">
-					<Label class="stationName" text="奥中山高原駅" color="#c08e47" />
-				</View>
-				<View class="stationNameContainer" number="10">
-					<Label class="stationName" text="小繋駅" color="#ae8dbc" />
-				</View>
-				<View class="stationNameContainer" number="11">
-					<Label class="stationName" text="小鳥谷駅" color="#c3cfa9" />
-				</View>
-				<View class="stationNameContainer" number="12">
-					<Label class="stationName" text="一戸駅" color="#9ad07b" />
-				</View>
-				<View class="stationNameContainer" number="13">
-					<Label class="stationName" text="二戸駅" color="#e352f8" />
-				</View>
-				<View class="stationNameContainer" number="14">
-					<Label class="stationName" text="斗米駅" color="#27c8d6" />
-				</View>
-				<View class="stationNameContainer" number="15">
-					<Label class="stationName" text="金田一温泉駅" color="#848bd5" />
-				</View>
-				<View class="stationNameContainer" number="16">
-					<Label class="stationName" text="目時駅" color="#4781e5" />
-				</View>
-			</ScrollView>
+      <!-- 駅名スクロールタブ -->
+      <ScrollView id="stationNameTabScroll" class="stationNameTabScrollContainer">
+        <View class="stationNameContainer" number="0">
+          <Label class="stationName" text="青山駅" color="#7b9ad0" />
+        </View>
+        <View class="stationNameContainer" number="1">
+          <Label class="stationName" text="厨川駅" color="#f8e352" />
+        </View>
+        <View class="stationNameContainer" number="2">
+          <Label class="stationName" text="巣子駅" color="#c8d627" />
+        </View>
+        <View class="stationNameContainer" number="3">
+          <Label class="stationName" text="滝沢駅" color="#d5848b" />
+        </View>
+        <View class="stationNameContainer" number="4">
+          <Label class="stationName" text="渋民駅" color="#e5ab47" />
+        </View>
+        <View class="stationNameContainer" number="5">
+          <Label class="stationName" text="好摩駅" color="#e1cea3" />
+        </View>
+        <View class="stationNameContainer" number="6">
+          <Label class="stationName" text="岩手川口駅" color="#51a1a2" />
+        </View>
+        <View class="stationNameContainer" number="7">
+          <Label class="stationName" text="いわて沼宮内駅" color="#b1d7e4" />
+        </View>
+        <View class="stationNameContainer" number="8">
+          <Label class="stationName" text="御堂駅" color="#66b7ec" />
+        </View>
+        <View class="stationNameContainer" number="9">
+          <Label class="stationName" text="奥中山高原駅" color="#c08e47" />
+        </View>
+        <View class="stationNameContainer" number="10">
+          <Label class="stationName" text="小繋駅" color="#ae8dbc" />
+        </View>
+        <View class="stationNameContainer" number="11">
+          <Label class="stationName" text="小鳥谷駅" color="#c3cfa9" />
+        </View>
+        <View class="stationNameContainer" number="12">
+          <Label class="stationName" text="一戸駅" color="#9ad07b" />
+        </View>
+        <View class="stationNameContainer" number="13">
+          <Label class="stationName" text="二戸駅" color="#e352f8" />
+        </View>
+        <View class="stationNameContainer" number="14">
+          <Label class="stationName" text="斗米駅" color="#27c8d6" />
+        </View>
+        <View class="stationNameContainer" number="15">
+          <Label class="stationName" text="金田一温泉駅" color="#848bd5" />
+        </View>
+        <View class="stationNameContainer" number="16">
+          <Label class="stationName" text="目時駅" color="#4781e5" />
+        </View>
+      </ScrollView>
 
-			<!-- 時刻表 -->
-			<ScrollableView id="timetableScrollable" class="timetableScrollableContainer" onScroll="changePage" onScrollend="falseClickTab">
-				<ListView class="timetableList">
-					<Templates>
-						<ItemTemplate name="aoyamaTemplate">
-							<Label bindId="time" class="time" />
-							<Label bindId="lastStation" class="lastStation" />
-							<Label bindId="lag" class="lag" />
-						</ItemTemplate>
-					</Templates>
-					<ListSection id="aoyamaListSection" />
-				</ListView>
-				<ListView class="timetableList">
-					<Templates>
-						<ItemTemplate name="kuriyagawaTemplate">
-							<Label bindId="time" class="time" />
-							<Label bindId="lastStation" class="lastStation" />
-							<Label bindId="lag" class="lag" />
-						</ItemTemplate>
-					</Templates>
-					<ListSection id="kuriyagawaListSection" />
-				</ListView>
-				<ListView class="timetableList">
-					<Templates>
-						<ItemTemplate name="sugoTemplate">
-							<Label bindId="time" class="time" />
-							<Label bindId="lastStation" class="lastStation" />
-							<Label bindId="lag" class="lag" />
-						</ItemTemplate>
-					</Templates>
-					<ListSection id="sugoListSection" />
-				</ListView>
-				<ListView class="timetableList">
-					<Templates>
-						<ItemTemplate name="takizawaTemplate">
-							<Label bindId="time" class="time" />
-							<Label bindId="lastStation" class="lastStation" />
-							<Label bindId="lag" class="lag" />
-						</ItemTemplate>
-					</Templates>
-					<ListSection id="takizawaListSection" />
-				</ListView>
-				<ListView class="timetableList">
-					<Templates>
-						<ItemTemplate name="sibutamiTemplate">
-							<Label bindId="time" class="time" />
-							<Label bindId="lastStation" class="lastStation" />
-							<Label bindId="lag" class="lag" />
-						</ItemTemplate>
-					</Templates>
-					<ListSection id="sibutamiListSection" />
-				</ListView>
-				<ListView class="timetableList">
-					<Templates>
-						<ItemTemplate name="koumaTemplate">
-							<Label bindId="time" class="time" />
-							<Label bindId="lastStation" class="lastStation" />
-							<Label bindId="lag" class="lag" />
-						</ItemTemplate>
-					</Templates>
-					<ListSection id="koumaListSection" />
-				</ListView>
-				<ListView class="timetableList">
-					<Templates>
-						<ItemTemplate name="kawagutiTemplate">
-							<Label bindId="time" class="time" />
-							<Label bindId="lastStation" class="lastStation" />
-							<Label bindId="lag" class="lag" />
-						</ItemTemplate>
-					</Templates>
-					<ListSection id="kawagutiListSection" />
-				</ListView>
-				<ListView class="timetableList">
-					<Templates>
-						<ItemTemplate name="numakunaiTemplate">
-							<Label bindId="time" class="time" />
-							<Label bindId="lastStation" class="lastStation" />
-							<Label bindId="lag" class="lag" />
-						</ItemTemplate>
-					</Templates>
-					<ListSection id="numakunaiListSection" />
-				</ListView>
-				<ListView class="timetableList">
-					<Templates>
-						<ItemTemplate name="midouTemplate">
-							<Label bindId="time" class="time" />
-							<Label bindId="lastStation" class="lastStation" />
-							<Label bindId="lag" class="lag" />
-						</ItemTemplate>
-					</Templates>
-					<ListSection id="midouListSection" />
-				</ListView>
-				<ListView class="timetableList">
-					<Templates>
-						<ItemTemplate name="okunakayamaTemplate">
-							<Label bindId="time" class="time" />
-							<Label bindId="lastStation" class="lastStation" />
-							<Label bindId="lag" class="lag" />
-						</ItemTemplate>
-					</Templates>
-					<ListSection id="okunakayamaListSection" />
-				</ListView>
-				<ListView class="timetableList">
-					<Templates>
-						<ItemTemplate name="kotunagiTemplate">
-							<Label bindId="time" class="time" />
-							<Label bindId="lastStation" class="lastStation" />
-							<Label bindId="lag" class="lag" />
-						</ItemTemplate>
-					</Templates>
-					<ListSection id="kotunagiListSection" />
-				</ListView>
-				<ListView class="timetableList">
-					<Templates>
-						<ItemTemplate name="kozuyaTemplate">
-							<Label bindId="time" class="time" />
-							<Label bindId="lastStation" class="lastStation" />
-							<Label bindId="lag" class="lag" />
-						</ItemTemplate>
-					</Templates>
-					<ListSection id="kozuyaListSection" />
-				</ListView>
-				<ListView class="timetableList">
-					<Templates>
-						<ItemTemplate name="itinoheTemplate">
-							<Label bindId="time" class="time" />
-							<Label bindId="lastStation" class="lastStation" />
-							<Label bindId="lag" class="lag" />
-						</ItemTemplate>
-					</Templates>
-					<ListSection id="itinoheListSection" />
-				</ListView>
-				<ListView class="timetableList">
-					<Templates>
-						<ItemTemplate name="ninoheTemplate">
-							<Label bindId="time" class="time" />
-							<Label bindId="lastStation" class="lastStation" />
-							<Label bindId="lag" class="lag" />
-						</ItemTemplate>
-					</Templates>
-					<ListSection id="ninoheListSection" />
-				</ListView>
-				<ListView class="timetableList">
-					<Templates>
-						<ItemTemplate name="tomaiTemplate">
-							<Label bindId="time" class="time" />
-							<Label bindId="lastStation" class="lastStation" />
-							<Label bindId="lag" class="lag" />
-						</ItemTemplate>
-					</Templates>
-					<ListSection id="tomaiListSection" />
-				</ListView>
-				<ListView class="timetableList">
-					<Templates>
-						<ItemTemplate name="kintaitiTemplate">
-							<Label bindId="time" class="time" />
-							<Label bindId="lastStation" class="lastStation" />
-							<Label bindId="lag" class="lag" />
-						</ItemTemplate>
-					</Templates>
-					<ListSection id="kintaitiListSection" />
-				</ListView>
-				<ListView class="timetableList">
-					<Templates>
-						<ItemTemplate name="metokiTemplate">
-							<Label bindId="time" class="time" />
-							<Label bindId="lastStation" class="lastStation" />
-							<Label bindId="lag" class="lag" />
-						</ItemTemplate>
-					</Templates>
-					<ListSection id="metokiListSection" />
-				</ListView>
-			</ScrollableView>
+      <!-- 時刻表 -->
+      <ScrollableView id="timetableScrollable" class="timetableScrollableContainer" onScroll="changePage" onScrollend="falseClickTab">
+        <ListView class="timetableList">
+          <Templates>
+            <ItemTemplate name="aoyamaTemplate">
+              <Label bindId="time" class="time" />
+              <Label bindId="lastStation" class="lastStation" />
+              <Label bindId="lag" class="lag" />
+            </ItemTemplate>
+          </Templates>
+          <ListSection id="aoyamaListSection" />
+        </ListView>
+        <ListView class="timetableList">
+          <Templates>
+            <ItemTemplate name="kuriyagawaTemplate">
+              <Label bindId="time" class="time" />
+              <Label bindId="lastStation" class="lastStation" />
+              <Label bindId="lag" class="lag" />
+            </ItemTemplate>
+          </Templates>
+          <ListSection id="kuriyagawaListSection" />
+        </ListView>
+        <ListView class="timetableList">
+          <Templates>
+            <ItemTemplate name="sugoTemplate">
+              <Label bindId="time" class="time" />
+              <Label bindId="lastStation" class="lastStation" />
+              <Label bindId="lag" class="lag" />
+            </ItemTemplate>
+          </Templates>
+          <ListSection id="sugoListSection" />
+        </ListView>
+        <ListView class="timetableList">
+          <Templates>
+            <ItemTemplate name="takizawaTemplate">
+              <Label bindId="time" class="time" />
+              <Label bindId="lastStation" class="lastStation" />
+              <Label bindId="lag" class="lag" />
+            </ItemTemplate>
+          </Templates>
+          <ListSection id="takizawaListSection" />
+        </ListView>
+        <ListView class="timetableList">
+          <Templates>
+            <ItemTemplate name="sibutamiTemplate">
+              <Label bindId="time" class="time" />
+              <Label bindId="lastStation" class="lastStation" />
+              <Label bindId="lag" class="lag" />
+            </ItemTemplate>
+          </Templates>
+          <ListSection id="sibutamiListSection" />
+        </ListView>
+        <ListView class="timetableList">
+          <Templates>
+            <ItemTemplate name="koumaTemplate">
+              <Label bindId="time" class="time" />
+              <Label bindId="lastStation" class="lastStation" />
+              <Label bindId="lag" class="lag" />
+            </ItemTemplate>
+          </Templates>
+          <ListSection id="koumaListSection" />
+        </ListView>
+        <ListView class="timetableList">
+          <Templates>
+            <ItemTemplate name="kawagutiTemplate">
+              <Label bindId="time" class="time" />
+              <Label bindId="lastStation" class="lastStation" />
+              <Label bindId="lag" class="lag" />
+            </ItemTemplate>
+          </Templates>
+          <ListSection id="kawagutiListSection" />
+        </ListView>
+        <ListView class="timetableList">
+          <Templates>
+            <ItemTemplate name="numakunaiTemplate">
+              <Label bindId="time" class="time" />
+              <Label bindId="lastStation" class="lastStation" />
+              <Label bindId="lag" class="lag" />
+            </ItemTemplate>
+          </Templates>
+          <ListSection id="numakunaiListSection" />
+        </ListView>
+        <ListView class="timetableList">
+          <Templates>
+            <ItemTemplate name="midouTemplate">
+              <Label bindId="time" class="time" />
+              <Label bindId="lastStation" class="lastStation" />
+              <Label bindId="lag" class="lag" />
+            </ItemTemplate>
+          </Templates>
+          <ListSection id="midouListSection" />
+        </ListView>
+        <ListView class="timetableList">
+          <Templates>
+            <ItemTemplate name="okunakayamaTemplate">
+              <Label bindId="time" class="time" />
+              <Label bindId="lastStation" class="lastStation" />
+              <Label bindId="lag" class="lag" />
+            </ItemTemplate>
+          </Templates>
+          <ListSection id="okunakayamaListSection" />
+        </ListView>
+        <ListView class="timetableList">
+          <Templates>
+            <ItemTemplate name="kotunagiTemplate">
+              <Label bindId="time" class="time" />
+              <Label bindId="lastStation" class="lastStation" />
+              <Label bindId="lag" class="lag" />
+            </ItemTemplate>
+          </Templates>
+          <ListSection id="kotunagiListSection" />
+        </ListView>
+        <ListView class="timetableList">
+          <Templates>
+            <ItemTemplate name="kozuyaTemplate">
+              <Label bindId="time" class="time" />
+              <Label bindId="lastStation" class="lastStation" />
+              <Label bindId="lag" class="lag" />
+            </ItemTemplate>
+          </Templates>
+          <ListSection id="kozuyaListSection" />
+        </ListView>
+        <ListView class="timetableList">
+          <Templates>
+            <ItemTemplate name="itinoheTemplate">
+              <Label bindId="time" class="time" />
+              <Label bindId="lastStation" class="lastStation" />
+              <Label bindId="lag" class="lag" />
+            </ItemTemplate>
+          </Templates>
+          <ListSection id="itinoheListSection" />
+        </ListView>
+        <ListView class="timetableList">
+          <Templates>
+            <ItemTemplate name="ninoheTemplate">
+              <Label bindId="time" class="time" />
+              <Label bindId="lastStation" class="lastStation" />
+              <Label bindId="lag" class="lag" />
+            </ItemTemplate>
+          </Templates>
+          <ListSection id="ninoheListSection" />
+        </ListView>
+        <ListView class="timetableList">
+          <Templates>
+            <ItemTemplate name="tomaiTemplate">
+              <Label bindId="time" class="time" />
+              <Label bindId="lastStation" class="lastStation" />
+              <Label bindId="lag" class="lag" />
+            </ItemTemplate>
+          </Templates>
+          <ListSection id="tomaiListSection" />
+        </ListView>
+        <ListView class="timetableList">
+          <Templates>
+            <ItemTemplate name="kintaitiTemplate">
+              <Label bindId="time" class="time" />
+              <Label bindId="lastStation" class="lastStation" />
+              <Label bindId="lag" class="lag" />
+            </ItemTemplate>
+          </Templates>
+          <ListSection id="kintaitiListSection" />
+        </ListView>
+        <ListView class="timetableList">
+          <Templates>
+            <ItemTemplate name="metokiTemplate">
+              <Label bindId="time" class="time" />
+              <Label bindId="lastStation" class="lastStation" />
+              <Label bindId="lag" class="lag" />
+            </ItemTemplate>
+          </Templates>
+          <ListSection id="metokiListSection" />
+        </ListView>
+      </ScrollableView>
 
-		</View>
-	</Window>
+    </View>
+  </Window>
 </Alloy>
