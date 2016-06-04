@@ -820,7 +820,6 @@ function setTabCenter(index) {
     scrollToX = children[index].rect.x;
     scrollToXTab = scrollToX - Alloy.Globals.halfDisplayWidth + (children[index].rect.width * 0.5);
     scrollToLastX = children[children.length - 1].rect.x;
-    // scrollToLastXTab = scrollToLastX - (Alloy.Globals.halfDisplayWidth * 2) + children[children.length - 1].rect.width;
   } else if (OS_ANDROID) {
     scrollToX = children[index].rect.x;
     scrollToXTab = Alloy.Globals.androidDpiWidthUnits * (scrollToX + (children[index].rect.width * 0.5) - Alloy.Globals.halfDisplayWidth);

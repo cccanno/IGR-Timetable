@@ -5,7 +5,8 @@
   tabsTintColor: "#6699FF"
 },
 "TabGroup[platform=android]": {
-  tabsBackgroundSelectedColor: "blue",
+  swipeable: false,
+  tabsBackgroundSelectedColor: "#6699FF",
   title: null,
   exitOnClose: true
 }
@@ -17,4 +18,7 @@
   iconInsets: { left: 0, bottom: 0 }
 },
 "Tab[platform=android]": {
+  backgroundColor: "#6699FF",
+  backgroundFocusedColor: "#6699FF",
+  backgroundSelectedColor: "#6699FF"
 }

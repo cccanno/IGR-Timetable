@@ -116,7 +116,11 @@ overrode the settings with other TSS, XML, or JS settings:
   width: Ti.UI.FILL,
   height: Ti.UI.FILL,
   backgroundColor: "#FFFFFF"
+},
+".timetableScrollableContainer[platform=android]": {
+	overScrollMode: Titanium.UI.Android.OVER_SCROLL_NEVER
 }
+
 
 ".timetableList": {
   separatorColor: "#E6E6E6",
@@ -126,7 +130,7 @@ overrode the settings with other TSS, XML, or JS settings:
   backgroundColor: "#FFFFFF"
 },
 ".timetableList[platform=ios]": {
-  separatorInsets: { right: 0, left: 0 }
+  tableSeparatorInsets: { right: 0, left: 0 }
 }
 
 "ItemTemplate": {
