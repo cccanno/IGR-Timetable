@@ -5,7 +5,8 @@
   tabsTintColor: "#6699FF"
 },
 "TabGroup[platform=android]": {
-  tabsBackgroundSelectedColor: "#FFFFFF",
+  tabsBackgroundSelectedColor: "blue",
+  title: null,
   exitOnClose: true
 }
 
@@ -14,4 +15,6 @@
 "Tab[platform=ios]": {
   iconIsMask: true,
   iconInsets: { left: 0, bottom: 0 }
+},
+"Tab[platform=android]": {
 }

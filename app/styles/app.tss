@@ -51,36 +51,49 @@ overrode the settings with other TSS, XML, or JS settings:
 /* 時刻表画面 - 駅名スクロールタブ */
 
 ".stationNameTabLine": {
-  top: 63,
   width: Ti.UI.FILL,
   height: 7,
   backgroundColor: "#FFFFFF",
   zIndex: 1
+},
+".stationNameTabLine[platform=ios]": {
+  top: 63,
+},
+".stationNameTabLine[platform=android]": {
+  top: 43,
 }
 
 ".stationNameTabScrollContainer": {
   width: Ti.UI.FILL,
   height: 50,
-  top: 20,
   backgroundColor: "#FAFAFA",
   layout: "horizontal",
   contentWidth: Ti.UI.SIZE,
   horizontalWrap: false
 },
 ".stationNameTabScrollContainer[platform=ios]": {
+  top: 20,
   disableBounce: true
 },
 ".stationNameTabScrollContainer[platform=android]": {
-  scrollType: "horizontal"
+  top: 0,
+  scrollType: "horizontal",
+	contentWidth: Ti.UI.SIZE,
+	contentHeight: Ti.UI.SIZE,
+	horizontalWrap: false
 }
 
 ".stationNameContainer": {
   left: 0,
   backgroundColor: "#FAFAFA",
   borderColor: "#FAFAFA",
-  borderRadius: 5,
   height: Ti.UI.FILL,
   width: Ti.UI.SIZE
+},
+".stationNameContainer[platform=ios]": {
+  borderRadius: 5,
+},
+".stationNameContainer[platform=android]": {
 }
 
 ".stationName": {

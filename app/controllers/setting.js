@@ -2,25 +2,25 @@
 var args = $.args;
 
 if (Ti.App.Properties.getBool("gpsSwitch")) {
-	$.gps.setBackgroundImage("/icons/checkOn");
+	$.gps.setBackgroundImage("/icons/checkOn.png");
 } else {
-	$.gps.setBackgroundImage("/icons/checkOff");
+	$.gps.setBackgroundImage("/icons/checkOff.png");
 }
 
 if (Ti.App.Properties.getBool("slideSwitch")) {
-	$.slide.setBackgroundImage("/icons/checkOn");
+	$.slide.setBackgroundImage("/icons/checkOn.png");
 } else {
-	$.slide.setBackgroundImage("/icons/checkOff");
+	$.slide.setBackgroundImage("/icons/checkOff.png");
 }
 
 
 /* 現在地情報 */
 function doGps() {
 	if (Ti.App.Properties.getBool("gpsSwitch")) {
-		$.gps.setBackgroundImage("/icons/checkOff");
+		$.gps.setBackgroundImage("/icons/checkOff.png");
 		Ti.App.Properties.setBool("gpsSwitch", false);
 	} else {
-		$.gps.setBackgroundImage("/icons/checkOn");
+		$.gps.setBackgroundImage("/icons/checkOn.png");
 		Ti.App.Properties.setBool("gpsSwitch", true);
 		Alloy.Globals.getCurrentPosition();
 	}
@@ -29,10 +29,10 @@ function doGps() {
 /* 発車時刻自動スライド */
 function doSlide() {
 	if (Ti.App.Properties.getBool("slideSwitch")) {
-		$.slide.setBackgroundImage("/icons/checkOff");
+		$.slide.setBackgroundImage("/icons/checkOff.png");
 		Ti.App.Properties.setBool("slideSwitch", false);
 	} else {
-		$.slide.setBackgroundImage("/icons/checkOn");
+		$.slide.setBackgroundImage("/icons/checkOn.png");
 		Ti.App.Properties.setBool("slideSwitch", true);
 	}
 }

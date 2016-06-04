@@ -766,14 +766,22 @@ function getTimeLag(e) {
 
 /* 駅名スクロールタブを中央に */
 function setTabCenter(index) {
-  var scrollToX = children[index].rect.x;
-  var scrollToXTab = children[index].rect.x - Alloy.Globals.halfDisplayWidth + (children[index].rect.width * 0.5);
-  var scrollToLastX = children[children.length - 1].rect.x;
-  var scrollToLastXTab = children[children.length - 1].rect.x - Ti.Platform.displayCaps.platformWidth + children[children.length - 1].rect.width;
+  var scrollToX, scrollToXTab, scrollToLastX, scrollToLastXTab;
+  if (OS_IOS) {
+    scrollToX = children[index].rect.x;
+    scrollToXTab = scrollToX - Alloy.Globals.halfDisplayWidth + (children[index].rect.width * 0.5);
+    scrollToLastX = children[children.length - 1].rect.x;
+    // scrollToLastXTab = scrollToLastX - (Alloy.Globals.halfDisplayWidth * 2) + children[children.length - 1].rect.width;
+  } else if (OS_ANDROID) {
+    scrollToX = children[index].rect.x;
+    scrollToXTab = Alloy.Globals.androidDpiWidthUnits * (scrollToX + (children[index].rect.width * 0.5) - Alloy.Globals.halfDisplayWidth);
+    scrollToLastX = children[children.length - 1].rect.x;
+  }
+
   if(scrollToXTab < 0) {
     $.stationNameTabScroll.scrollTo(0, 0);
   } else if((scrollToLastX - scrollToX) < Alloy.Globals.halfDisplayWidth) {
-    $.stationNameTabScroll.scrollTo(scrollToLastXTab, 0);
+    $.stationNameTabScroll.scrollToBottom();
   } else {
     $.stationNameTabScroll.scrollTo(scrollToXTab, 0);
   }

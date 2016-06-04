@@ -1,5 +1,5 @@
 <Alloy>
-	<TabGroup>
+	<TabGroup platform="ios">
 		<Tab title="上り線" icon="/icons/tabIcons/upLineTimetable.png">
 			<Require type="view" src="upLineTimetable" />
 		</Tab>
@@ -7,9 +7,26 @@
 			<Require type="view" src="downLineTimetable" />
 		</Tab>
 		<Tab title="マップ" icon="/icons/tabIcons/stationMap.png">
-			<Require type="view" src="stationMap" />
+			<!-- <Require type="view" src="stationMap" /> -->
+			<Window />
 		</Tab>
 		<Tab title="設定" icon="/icons/tabIcons/setting.png">
+			<!-- <Require type="view" src="setting" /> -->
+			<Window />
+		</Tab>
+	</TabGroup>
+
+	<TabGroup platform="android">
+		<Tab title=" 上り線" icon="/icons/tabIcons/upLineTimetable@2x.png">
+			<Require type="view" src="upLineTimetable" />
+		</Tab>
+		<Tab title=" 下り線" icon="/icons/tabIcons/downLineTimetable@2x.png">
+			<Require type="view" src="downLineTimetable" />
+		</Tab>
+		<Tab title=" マップ" icon="/icons/tabIcons/stationMap@2x.png">
+			<Require type="view" src="stationMap" />
+		</Tab>
+		<Tab title=" 設定" icon="/icons/tabIcons/setting@2x.png">
 			<Require type="view" src="setting" />
 		</Tab>
 	</TabGroup>
