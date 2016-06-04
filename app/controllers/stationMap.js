@@ -1,12 +1,6 @@
 // Arguments passed into this controller can be accessed via the `$.args` object directly or:
 var args = $.args;
-
-function moveCurrentPosition() {
-	$.mapView.region = {
-		latitude: Alloy.Globals.latitude,
-		longitude: Alloy.Globals.longitude
-	}
-}
+var stationMapView;
 
 var morioka = Alloy.Globals.Map.createAnnotation({
 	latitude: 39.701317,
@@ -170,7 +164,7 @@ var metoki = Alloy.Globals.Map.createAnnotation({
 	myid: 18
 });
 
-$.mapView.annotations = [
+var annotations = [
 	morioka,
 	aoyama,
 	kuriyagawa,
@@ -190,3 +184,38 @@ $.mapView.annotations = [
 	kintaiti,
 	metoki
 ];
+
+if (OS_IOS) {
+	$.mapView.annotations = annotations;
+} else if (OS_ANDROID) {
+		stationMapView = Alloy.Globals.Map.createView({
+		userLocation: true,
+		mapType: Alloy.Globals.Map.NORMAL_TYPE,
+		animate: true,
+  	regionFit: true,
+		region: {
+			latitude: Alloy.Globals.latitude,
+			longitude: Alloy.Globals.longitude,
+			latitudeDelta: 0.1,
+			longitudeDelta: 0.1
+		},
+		annotations: annotations
+	});
+	$.stationMapWin.add(stationMapView);
+}
+
+function moveCurrentPosition() {
+	if (OS_IOS) {
+		$.mapView.region = {
+			latitude: Alloy.Globals.latitude,
+			longitude: Alloy.Globals.longitude
+		}
+	} else if (OS_ANDROID) {
+		stationMapView.region = {
+			latitude: Alloy.Globals.latitude,
+			longitude: Alloy.Globals.longitude,
+			latitudeDelta: 0.1,
+			longitudeDelta: 0.1
+		}
+	}
+}

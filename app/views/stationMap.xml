@@ -1,6 +1,6 @@
 <Alloy>
 	<Window id="stationMapWin" onFocus="moveCurrentPosition">
-		<View class="container">
+		<View class="container" platform="ios">
 
 			<!-- ナビゲーションView -->
 			<View class="navContainer" platform="ios">

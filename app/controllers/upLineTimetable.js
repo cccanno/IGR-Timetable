@@ -755,7 +755,6 @@ function showNearStationTab() {
           nearStationIndex = i;
         }
       }
-      Ti.API.debug("hoge: " + nearStationIndex);
     }
 
     $.timetableScrollable.scrollToView(nearStationIndex);
