@@ -8,15 +8,17 @@ var scrollPage = 0;
 var clickedTab = undefined;
 var currentTab;
 
-
-var date = new Date();
-hour = String(date.getHours());
-if (date.getMinutes() < 10) {
-  minutes = "0" + date.getMinutes();
-} else {
-  minutes = String(date.getMinutes());
-}
-currentTime = Number(hour + minutes);
+function getCurrentDate() {
+  var date = new Date();
+  hour = String(date.getHours());
+  if (date.getMinutes() < 10) {
+    minutes = "0" + date.getMinutes();
+  } else {
+    minutes = String(date.getMinutes());
+  }
+  currentTime = Number(hour + minutes);
+};
+getCurrentDate();
 
 var stations = [
   "青山駅",
@@ -621,33 +623,145 @@ currentTab.children[0].setColor("#FFFFFF");
 $.stationNameTabLine.setBackgroundColor(stationNameTabColor[0]);
 children[0].fireEvent("click");
 
-/* 現在地から近い駅を計算し表示する */
-function showNearStationTab() {
-  var distanceData = [];
-  for (var i = 0; i < latAndLngData.length; i++) {
-    distanceData.push(Alloy.Globals.getDistance(latAndLngData[i].lat, latAndLngData[i].lng));
+/* 次の発車時刻の時間差取得をしてUpdate */
+function getTimeLag(e) {
+  var listSection = $.timetableScrollable.views[e].sections[0];
+  var currentHour = Number(hour);
+  var currentMinutes = Number(minutes);
+  for (var i = scrollItemIndex; i < (scrollItemIndex + 3); i++) {
+    if(listSection.getItemAt(i) == null || listSection.getItemAt(i) == undefined) {
+      return;
+    }
+    var listItem = listSection.getItemAt(i);
+    var itemRate = listItem.time.text.split(":");
+    var itemHour = Number(itemRate[0]);
+    var itemMinutes = Number(itemRate[1]);
+    var hourLag = itemHour - currentHour;
+    var minutesLag;
+    var timeLagLabel;
+    if (currentMinutes > itemMinutes) {
+      minutesLag = itemMinutes - currentMinutes + 60;
+      hourLag--;
+    } else {
+      minutesLag = itemMinutes - currentMinutes;
+    }
+    if (hourLag == 0) {
+      timeLagLabel = minutesLag + "分";
+    } else {
+      timeLagLabel = hourLag + "時間" + minutesLag + "分";
+    }
+
+    if (i == scrollItemIndex) {
+      listItem.time.color = "#ff0000";
+      for (var restoreIndex = scrollItemIndex - 1; restoreIndex >= 0; restoreIndex--) {
+        if (listSection.getItemAt(restoreIndex).lastStation.top == 10) {
+          var restoreItem = listSection.getItemAt(restoreIndex);
+          restoreItem.time.color = "#333333";
+          restoreItem.properties = {
+            height: 50
+          };
+          restoreItem.time.font = {
+            fontSize: 20
+          };
+          restoreItem.lastStation.top = null;
+          restoreItem.lastStation.font = {
+            fontSize: 14
+          };
+          restoreItem.lag.font = {
+            fontSize: 14
+          };
+          restoreItem.lag.bottom = null;
+          restoreItem.lag.text = "";
+          listSection.updateItemAt(restoreIndex, restoreItem, {animate: true});
+        } else {
+          restoreIndex = -1;
+        }
+      }
+    }
+
+    listItem.properties = {
+      height: 90
+    };
+    listItem.time.font = {
+      fontSize: 32
+    };
+    listItem.lastStation.top = 10;
+    listItem.lastStation.font = {
+      fontSize: 18
+    };
+    listItem.lag.font = {
+      fontSize: 18
+    };
+    listItem.lag.bottom = 10;
+    listItem.lag.text = "発車まであと" + timeLagLabel;
+    listSection.updateItemAt(i, listItem, {animate: true});
+  }
+};
+
+/* 発車時刻が近いindexに移動 */
+function sectionUpdateItem(e) {
+  if (!Ti.App.Properties.getBool("slideSwitch")) {
+    return;
   }
 
-  var nearStationIndex;
-  var a, b;
-  for (var i = 0; i < distanceData.length; i++) {
-    a = distanceData[i];
-    if (i === 0) {
-      b = a;
-      nearStationIndex = i;
+  var listSection = $.timetableScrollable.views[e].sections[0];
+  if (listSection.items.length - 1 >= scrollItemIndex + 4) {
+    $.timetableScrollable.views[e].scrollToItem(0, scrollItemIndex + 4, {animate: true});
+  } else {
+    $.timetableScrollable.views[e].scrollToItem(0, listSection.items.length - 1, {animate: true});
+  }
+  $.timetableScrollable.views[e].scrollToItem(0, scrollItemIndex + 4, {animate: true});
+};
+
+/* 発車時刻に近いIndexを取得 */
+function getScrollItemIndex(e) {
+  var currentStationsData = allSatationsData[e];
+  if (currentTime > currentStationsData[currentStationsData.length - 1].rate) {
+    scrollItemIndex = 0;
+    sectionUpdateItem(e);
+    return;
+  }
+  for (var i = 0; i < currentStationsData.length; i++) {
+    if (currentTime < currentStationsData[i].rate) {
+      scrollItemIndex = i;
+      sectionUpdateItem(e);
+      getCurrentDate();
+      getTimeLag(e);
+      return;
     }
-    if (i > 0) {
-      if (a < b) {
+  }
+};
+
+/* 現在地から近い駅を計算し表示する */
+function showNearStationTab() {
+  if (Ti.App.Properties.getBool("gpsSwitch")) {
+    var distanceData = [];
+    for (var i = 0; i < latAndLngData.length; i++) {
+      distanceData.push(Alloy.Globals.getDistance(latAndLngData[i].lat, latAndLngData[i].lng));
+    }
+
+    var nearStationIndex = 0;
+    var a, b;
+    for (var i = 0; i < distanceData.length; i++) {
+      a = distanceData[i];
+      if (i == 0) {
         b = a;
         nearStationIndex = i;
       }
-    }
-  }
 
-  if (Ti.App.Properties.getBool("gpsSwitch")) {
+      if (i > 0) {
+        if (a < b) {
+          b = a;
+          nearStationIndex = i;
+        }
+      }
+      Ti.API.debug("hoge: " + nearStationIndex);
+    }
+
     $.timetableScrollable.scrollToView(nearStationIndex);
   }
-  getScrollItemIndex(nearStationIndex);
+
+  getScrollItemIndex($.timetableScrollable.currentPage);
 }
 
 /* 時刻表スライド時イベント */
@@ -681,99 +795,23 @@ function falseClickTab(e) {
   clickedTab = false;
 }
 
-/* 発車時刻に近いIndexに移動 */
-function getScrollItemIndex(e) {
-  var currentStationsData = allSatationsData[e];
-  if (currentTime > currentStationsData[currentStationsData.length - 1].rate) {
-    scrollItemIndex = 0;
-    sectionUpdateItem(e);
-    return;
-  }
-  for (var i = 0; i < currentStationsData.length; i++) {
-    if (currentTime < currentStationsData[i].rate) {
-      scrollItemIndex = i;
-      sectionUpdateItem(e);
-      getTimeLag(e);
-      return;
-    }
-  }
-};
-
-/* 発車時刻が近いindexの見た目を変化 */
-function sectionUpdateItem(e) {
-  if (!Ti.App.Properties.getBool("slideSwitch")) {
-    return;
-  }
-
-  var listSection = $.timetableScrollable.views[e].sections[0];
-  if (listSection.items.length - 1 >= scrollItemIndex + 4) {
-    $.timetableScrollable.views[e].scrollToItem(0, scrollItemIndex + 4, {animate: true});
-  } else {
-    $.timetableScrollable.views[e].scrollToItem(0, listSection.items.length - 1, {animate: true});
-  }
-  $.timetableScrollable.views[e].scrollToItem(0, scrollItemIndex + 4, {animate: true});
-};
-
-/* 次の発車時刻の時間差取得 */
-function getTimeLag(e) {
-  var listSection = $.timetableScrollable.views[e].sections[0];
-  var currentHour = Number(hour);
-  var currentMinutes = Number(minutes);
-  for (var i = scrollItemIndex; i < (scrollItemIndex + 3); i++) {
-    if(listSection.getItemAt(i) == null || listSection.getItemAt(i) == undefined) {
-      return;
-    }
-    var listItem = listSection.getItemAt(i);
-    var itemRate = listItem.time.text.split(":");
-    var itemHour = Number(itemRate[0]);
-    var itemMinutes = Number(itemRate[1]);
-    var hourLag = itemHour - currentHour;
-    var minutesLag;
-    var timeLagLabel;
-    if (currentMinutes > itemMinutes) {
-      minutesLag = itemMinutes - currentMinutes + 60;
-      hourLag--;
-    } else {
-      minutesLag = itemMinutes - currentMinutes;
-    }
-    if (hourLag == 0) {
-      timeLagLabel = minutesLag + "分";
-    } else {
-      timeLagLabel = hourLag + "時間" + minutesLag + "分";
-    }
-
-    if (i == scrollItemIndex) {
-      listItem.time.color = "#ff0000";
-    }
-    listItem.properties = {
-      height: 90
-    }
-    listItem.time.font = {
-      fontSize: 32
-    };
-    listItem.lastStation.top = 10;
-    listItem.lastStation.font = {
-      fontSize: 18
-    }
-    listItem.lag.font = {
-      fontSize: 18
-    }
-    listItem.lag.bottom = 10;
-    listItem.lag.text = "発車まであと" + timeLagLabel;
-    listSection.updateItemAt(i, listItem, {animate: true});
-  }
-};
-
 /* 駅名スクロールタブを中央に */
 function setTabCenter(index) {
-  var scrollToX = children[index].rect.x;
-  var scrollToXTab = children[index].rect.x - Alloy.Globals.halfDisplayWidth + (children[index].rect.width * 0.5);
-  var scrollToLastX = children[children.length - 1].rect.x;
-  var scrollToLastXTab = children[children.length - 1].rect.x - Ti.Platform.displayCaps.platformWidth + children[children.length - 1].rect.width;
+  var scrollToX, scrollToXTab, scrollToLastX, scrollToLastXTab;
+  if (OS_IOS) {
+    scrollToX = children[index].rect.x;
+    scrollToXTab = scrollToX - Alloy.Globals.halfDisplayWidth + (children[index].rect.width * 0.5);
+    scrollToLastX = children[children.length - 1].rect.x;
+  } else if (OS_ANDROID) {
+    scrollToX = children[index].rect.x;
+    scrollToXTab = Alloy.Globals.androidDpiWidthUnits * (scrollToX + (children[index].rect.width * 0.5) - Alloy.Globals.halfDisplayWidth);
+    scrollToLastX = children[children.length - 1].rect.x;
+  }
+
   if(scrollToXTab < 0) {
     $.stationNameTabScroll.scrollTo(0, 0);
   } else if((scrollToLastX - scrollToX) < Alloy.Globals.halfDisplayWidth) {
-    $.stationNameTabScroll.scrollTo(scrollToLastXTab, 0);
+    $.stationNameTabScroll.scrollToBottom();
   } else {
     $.stationNameTabScroll.scrollTo(scrollToXTab, 0);
   }

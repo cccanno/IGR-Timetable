@@ -16,6 +16,15 @@ Alloy.Globals.latitude = 39.702053;
 Alloy.Globals.longitude = 141.154484;
 Alloy.Globals.halfDisplayWidth = Ti.Platform.displayCaps.platformWidth * 0.5;
 
+if (OS_ANDROID) {
+  if (Ti.Platform.displayCaps.dpi > 160) {
+    Alloy.Globals.androidDpiWidthUnits = Ti.Platform.displayCaps.dpi / 160;
+    Alloy.Globals.halfDisplayWidth = Ti.Platform.displayCaps.platformWidth / Alloy.Globals.androidDpiWidthUnits * 0.5;
+  } else {
+    Alloy.Globals.androidDpiWidthUnits = 1;
+  }
+}
+
 /* GPS ＆ スライド 機能 初期状態は OFF */
 if (Ti.App.Properties.getBool("gpsSwitch") == null) {
   Ti.App.Properties.setBool("gpsSwitch", false);

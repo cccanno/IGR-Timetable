@@ -3,10 +3,10 @@
 		<View class="container">
 
 			<!-- ナビゲーションView -->
-			<View class="navContainer">
+			<View class="navContainer" platform="ios">
 				<Label class="navTitle">マップ</Label>
 			</View>
-			<View class="borderLine" />
+			<View class="borderLine" platform="ios" />
 
 			<!-- 駅マップ -->
 			<View id="mapView" module="ti.map" />

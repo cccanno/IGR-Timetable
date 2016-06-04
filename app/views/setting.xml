@@ -3,10 +3,10 @@
 		<View class="container">
 
 			<!-- ナビゲーションView -->
-			<View class="navContainer">
+			<View class="navContainer" platform="ios">
 				<Label class="navTitle">設定</Label>
 			</View>
-			<View class="borderLine" />
+			<View class="borderLine" platform="ios" />
 
 			<!-- 駅マップ -->
 			<ScrollView class="scrollContainer" backgroundColor="#DFDFDF">
