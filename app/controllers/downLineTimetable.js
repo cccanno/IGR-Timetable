@@ -670,99 +670,6 @@ currentTab.children[0].setColor("#FFFFFF");
 $.stationNameTabLine.setBackgroundColor(stationNameTabColor[0]);
 children[0].fireEvent("click");
 
-/* 現在地から近い駅を計算し表示する */
-function showNearStationTab() {
-  var distanceData = [];
-  for (var i = 0; i < latAndLngData.length; i++) {
-    distanceData.push(Alloy.Globals.getDistance(latAndLngData[i].lat, latAndLngData[i].lng));
-  }
-
-  var nearStationIndex;
-  var a, b;
-  for (var i = 0; i < distanceData.length; i++) {
-    a = distanceData[i];
-    if (i === 0) {
-      b = a;
-      nearStationIndex = i;
-    }
-    if (i > 0) {
-      if (a < b) {
-        b = a;
-        nearStationIndex = i;
-      }
-    }
-  }
-
-  if (Ti.App.Properties.getBool("gpsSwitch")) {
-    $.timetableScrollable.scrollToView(nearStationIndex);
-  }
-  getScrollItemIndex(nearStationIndex);
-}
-
-/* 時刻表スライド時イベント */
-function changePage(e) {
-  if(e.currentPage != scrollPage) {
-    try {
-      if(!clickedTab) {
-        var that = children[e.currentPage];
-        if (that != currentTab) {
-          that.setBackgroundColor(stationNameTabColor[e.currentPage]);
-          that.setBorderColor(stationNameTabColor[e.currentPage]);
-          that.children[0].setColor("#FFFFFF");
-          $.stationNameTabLine.setBackgroundColor(stationNameTabColor[e.currentPage]);
-          currentTab.setBackgroundColor("#FAFAFA");
-          currentTab.setBorderColor("#FAFAFA");
-          currentTab.children[0].setColor(stationNameTabColor[currentTab.number]);
-          currentTab = that;
-          setTabCenter(e.currentPage);
-        }
-      }
-      scrollPage = e.currentPage;
-      getScrollItemIndex(e.currentPage);
-    } catch(e) {
-      Ti.API.info(e.error || e);
-    }
-  }
-};
-
-/* スライド終了時イベント */
-function falseClickTab(e) {
-  clickedTab = false;
-}
-
-/* 発車時刻に近いIndexに移動 */
-function getScrollItemIndex(e) {
-  var currentStationsData = allSatationsData[e];
-  if (currentTime > currentStationsData[currentStationsData.length - 1].rate) {
-    scrollItemIndex = 0;
-    sectionUpdateItem(e);
-    return;
-  }
-  for (var i = 0; i < currentStationsData.length; i++) {
-    if (currentTime < currentStationsData[i].rate) {
-      scrollItemIndex = i;
-      sectionUpdateItem(e);
-      getTimeLag(e);
-      return;
-    }
-  }
-};
-
-/* 発車時刻が近いindexの見た目を変化 */
-function sectionUpdateItem(e) {
-  if (!Ti.App.Properties.getBool("slideSwitch")) {
-    return;
-  }
-
-  var listSection = $.timetableScrollable.views[e].sections[0];
-  if (listSection.items.length - 1 >= scrollItemIndex + 4) {
-    $.timetableScrollable.views[e].scrollToItem(0, scrollItemIndex + 4, {animate: true});
-  } else {
-    $.timetableScrollable.views[e].scrollToItem(0, listSection.items.length - 1, {animate: true});
-  }
-  $.timetableScrollable.views[e].scrollToItem(0, scrollItemIndex + 4, {animate: true});
-};
-
 /* 次の発車時刻の時間差取得 */
 function getTimeLag(e) {
   var listSection = $.timetableScrollable.views[e].sections[0];
@@ -812,6 +719,102 @@ function getTimeLag(e) {
     listSection.updateItemAt(i, listItem, {animate: true});
   }
 };
+
+/* 発車時刻が近いindexの見た目を変化 */
+function sectionUpdateItem(e) {
+  if (!Ti.App.Properties.getBool("slideSwitch")) {
+    return;
+  }
+
+  var listSection = $.timetableScrollable.views[e].sections[0];
+  if (listSection.items.length - 1 >= scrollItemIndex + 4) {
+    $.timetableScrollable.views[e].scrollToItem(0, scrollItemIndex + 4, {animate: true});
+  } else {
+    $.timetableScrollable.views[e].scrollToItem(0, listSection.items.length - 1, {animate: true});
+  }
+  $.timetableScrollable.views[e].scrollToItem(0, scrollItemIndex + 4, {animate: true});
+};
+
+/* 発車時刻に近いIndexに移動 */
+function getScrollItemIndex(e) {
+  var currentStationsData = allSatationsData[e];
+  if (currentTime > currentStationsData[currentStationsData.length - 1].rate) {
+    scrollItemIndex = 0;
+    sectionUpdateItem(e);
+    return;
+  }
+  for (var i = 0; i < currentStationsData.length; i++) {
+    if (currentTime < currentStationsData[i].rate) {
+      scrollItemIndex = i;
+      sectionUpdateItem(e);
+      getTimeLag(e);
+      return;
+    }
+  }
+};
+
+/* 現在地から近い駅を計算し表示する */
+function showNearStationTab() {
+  if (Ti.App.Properties.getBool("gpsSwitch")) {
+    var distanceData = [];
+    for (var i = 0; i < latAndLngData.length; i++) {
+      distanceData.push(Alloy.Globals.getDistance(latAndLngData[i].lat, latAndLngData[i].lng));
+    }
+
+    var nearStationIndex;
+    var a, b;
+    for (var i = 0; i < distanceData.length; i++) {
+      a = distanceData[i];
+      if (i === 0) {
+        b = a;
+        nearStationIndex = i;
+      }
+      if (i > 0) {
+        if (a < b) {
+          b = a;
+          nearStationIndex = i;
+        }
+      }
+    }
+
+    $.timetableScrollable.scrollToView(nearStationIndex);
+  }
+
+  if (Ti.App.Properties.getBool("slideSwitch")) {
+    getScrollItemIndex($.timetableScrollable.currentPage);
+  }
+}
+
+/* 時刻表スライド時イベント */
+function changePage(e) {
+  if(e.currentPage != scrollPage) {
+    try {
+      if(!clickedTab) {
+        var that = children[e.currentPage];
+        if (that != currentTab) {
+          that.setBackgroundColor(stationNameTabColor[e.currentPage]);
+          that.setBorderColor(stationNameTabColor[e.currentPage]);
+          that.children[0].setColor("#FFFFFF");
+          $.stationNameTabLine.setBackgroundColor(stationNameTabColor[e.currentPage]);
+          currentTab.setBackgroundColor("#FAFAFA");
+          currentTab.setBorderColor("#FAFAFA");
+          currentTab.children[0].setColor(stationNameTabColor[currentTab.number]);
+          currentTab = that;
+          setTabCenter(e.currentPage);
+        }
+      }
+      scrollPage = e.currentPage;
+      getScrollItemIndex(e.currentPage);
+    } catch(e) {
+      Ti.API.info(e.error || e);
+    }
+  }
+};
+
+/* スライド終了時イベント */
+function falseClickTab(e) {
+  clickedTab = false;
+}
 
 /* 駅名スクロールタブを中央に */
 function setTabCenter(index) {
