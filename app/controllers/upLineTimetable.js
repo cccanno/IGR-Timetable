@@ -8,15 +8,17 @@ var scrollPage = 0;
 var clickedTab = undefined;
 var currentTab;
 
-
-var date = new Date();
-hour = String(date.getHours());
-if (date.getMinutes() < 10) {
-  minutes = "0" + date.getMinutes();
-} else {
-  minutes = String(date.getMinutes());
-}
-currentTime = Number(hour + minutes);
+function getCurrentDate() {
+  var date = new Date();
+  hour = String(date.getHours());
+  if (date.getMinutes() < 10) {
+    minutes = "0" + date.getMinutes();
+  } else {
+    minutes = String(date.getMinutes());
+  }
+  currentTime = Number(hour + minutes);
+};
+getCurrentDate();
 
 var stations = [
   "青山駅",
@@ -621,7 +623,7 @@ currentTab.children[0].setColor("#FFFFFF");
 $.stationNameTabLine.setBackgroundColor(stationNameTabColor[0]);
 children[0].fireEvent("click");
 
-/* 次の発車時刻の時間差取得 */
+/* 次の発車時刻の時間差取得をしてUpdate */
 function getTimeLag(e) {
   var listSection = $.timetableScrollable.views[e].sections[0];
   var currentHour = Number(hour);
@@ -671,7 +673,7 @@ function getTimeLag(e) {
   }
 };
 
-/* 発車時刻が近いindexの見た目を変化 */
+/* 発車時刻が近いindexに移動 */
 function sectionUpdateItem(e) {
   if (!Ti.App.Properties.getBool("slideSwitch")) {
     return;
@@ -686,7 +688,7 @@ function sectionUpdateItem(e) {
   $.timetableScrollable.views[e].scrollToItem(0, scrollItemIndex + 4, {animate: true});
 };
 
-/* 発車時刻に近いIndexに移動 */
+/* 発車時刻に近いIndexを取得 */
 function getScrollItemIndex(e) {
   var currentStationsData = allSatationsData[e];
   if (currentTime > currentStationsData[currentStationsData.length - 1].rate) {
@@ -698,6 +700,7 @@ function getScrollItemIndex(e) {
     if (currentTime < currentStationsData[i].rate) {
       scrollItemIndex = i;
       sectionUpdateItem(e);
+      getCurrentDate();
       getTimeLag(e);
       return;
     }
@@ -733,9 +736,7 @@ function showNearStationTab() {
     $.timetableScrollable.scrollToView(nearStationIndex);
   }
 
-  if (Ti.App.Properties.getBool("slideSwitch")) {
-    getScrollItemIndex($.timetableScrollable.currentPage);
-  }
+  getScrollItemIndex($.timetableScrollable.currentPage);
 }
 
 /* 時刻表スライド時イベント */
