@@ -703,25 +703,29 @@ function getTimeLag(e) {
 
     if (i == scrollItemIndex) {
       listItem.time.color = "#ff0000";
-      if (listSection.getItemAt(i - 1).time.color == "#ff0000") {
-        var restoreItem = listSection.getItemAt(i - 1);
-        restoreItem.time.color = "#333333";
-        restoreItem.properties = {
-          height: 50
-        };
-        restoreItem.time.font = {
-          fontSize: 20
-        };
-        restoreItem.lastStation.top = null;
-        restoreItem.lastStation.font = {
-          fontSize: 14
-        };
-        restoreItem.lag.font = {
-          fontSize: 14
-        };
-        restoreItem.lag.bottom = null;
-        restoreItem.lag.text = "";
-        listSection.updateItemAt(i - 1, restoreItem, {animate: true});
+      for (var restoreIndex = scrollItemIndex - 1; restoreIndex >= 0; restoreIndex--) {
+        if (listSection.getItemAt(restoreIndex).lastStation.top == 10) {
+          var restoreItem = listSection.getItemAt(restoreIndex);
+          restoreItem.time.color = "#333333";
+          restoreItem.properties = {
+            height: 50
+          };
+          restoreItem.time.font = {
+            fontSize: 20
+          };
+          restoreItem.lastStation.top = null;
+          restoreItem.lastStation.font = {
+            fontSize: 14
+          };
+          restoreItem.lag.font = {
+            fontSize: 14
+          };
+          restoreItem.lag.bottom = null;
+          restoreItem.lag.text = "";
+          listSection.updateItemAt(restoreIndex, restoreItem, {animate: true});
+        } else {
+          restoreIndex = -1;
+        }
       }
     }
 
