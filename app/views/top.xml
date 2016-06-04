@@ -7,12 +7,10 @@
 			<Require type="view" src="downLineTimetable" />
 		</Tab>
 		<Tab title="マップ" icon="/icons/tabIcons/stationMap.png">
-			<!-- <Require type="view" src="stationMap" /> -->
-			<Window />
+			<Require type="view" src="stationMap" />
 		</Tab>
 		<Tab title="設定" icon="/icons/tabIcons/setting.png">
-			<!-- <Require type="view" src="setting" /> -->
-			<Window />
+			<Require type="view" src="setting" />
 		</Tab>
 	</TabGroup>
 
