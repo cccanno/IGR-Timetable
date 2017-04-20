@@ -130,7 +130,7 @@ overrode the settings with other TSS, XML, or JS settings:
   backgroundColor: "#FFFFFF"
 },
 ".timetableList[platform=ios]": {
-  tableSeparatorInsets: { right: 0, left: 0 }
+  listSeparatorInsets: { right: 0, left: 0 }
 }
 
 "ItemTemplate": {
@@ -138,7 +138,7 @@ overrode the settings with other TSS, XML, or JS settings:
   backgroundColor: "#FFFFFF",
 },
 "ItemTemplate[platform=ios]": {
-  selectionStyle: Titanium.UI.iPhone.ListViewCellSelectionStyle.NONE
+  selectionStyle: Titanium.UI.iOS.ListViewCellSelectionStyle.NONE
 }
 
 ".time": {

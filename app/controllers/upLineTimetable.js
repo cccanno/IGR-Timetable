@@ -57,7 +57,6 @@ var aoyamaData = [
   {template: "aoyamaTemplate", time: {text: "10:10"}, lastStation: {text: "盛岡"}, rate: 1010, lag: {}},
   {template: "aoyamaTemplate", time: {text: "10:44"}, lastStation: {text: "盛岡"}, rate: 1044, lag: {}},
   {template: "aoyamaTemplate", time: {text: "11:08"}, lastStation: {text: "盛岡"}, rate: 1108, lag: {}},
-  {template: "aoyamaTemplate", time: {text: "11:51"}, lastStation: {text: "盛岡"}, rate: 1151, lag: {}},
   {template: "aoyamaTemplate", time: {text: "12:10"}, lastStation: {text: "[花]盛岡"}, rate: 1210, lag: {}},
   {template: "aoyamaTemplate", time: {text: "12:25"}, lastStation: {text: "盛岡"}, rate: 1225, lag: {}},
   {template: "aoyamaTemplate", time: {text: "12:54"}, lastStation: {text: "盛岡"}, rate: 1254, lag: {}},
@@ -69,7 +68,7 @@ var aoyamaData = [
   {template: "aoyamaTemplate", time: {text: "16:22"}, lastStation: {text: "[花]盛岡"}, rate: 1622, lag: {}},
   {template: "aoyamaTemplate", time: {text: "16:48"}, lastStation: {text: "盛岡"}, rate: 1648, lag: {}},
   {template: "aoyamaTemplate", time: {text: "17:10"}, lastStation: {text: "盛岡"}, rate: 1710, lag: {}},
-  {template: "aoyamaTemplate", time: {text: "17:51"}, lastStation: {text: "盛岡"}, rate: 1751, lag: {}},
+  {template: "aoyamaTemplate", time: {text: "17:54"}, lastStation: {text: "盛岡"}, rate: 1754, lag: {}},
   {template: "aoyamaTemplate", time: {text: "18:32"}, lastStation: {text: "[花]盛岡"}, rate: 1832, lag: {}},
   {template: "aoyamaTemplate", time: {text: "18:45"}, lastStation: {text: "盛岡"}, rate: 1845, lag: {}},
   {template: "aoyamaTemplate", time: {text: "18:56"}, lastStation: {text: "盛岡"}, rate: 1856, lag: {}},
@@ -81,7 +80,7 @@ var aoyamaData = [
   {template: "aoyamaTemplate", time: {text: "21:16"}, lastStation: {text: "盛岡"}, rate: 2116, lag: {}},
   {template: "aoyamaTemplate", time: {text: "21:55"}, lastStation: {text: "[花]盛岡"}, rate: 2155, lag: {}},
   {template: "aoyamaTemplate", time: {text: "22:18"}, lastStation: {text: "盛岡"}, rate: 2218, lag: {}},
-  {template: "aoyamaTemplate", time: {text: "22:43"}, lastStation: {text: "盛岡"}, rate: 2243, lag: {}}
+  {template: "aoyamaTemplate", time: {text: "22:45"}, lastStation: {text: "盛岡"}, rate: 2245, lag: {}}
 ];
 $.aoyamaListSection.setItems(aoyamaData);
 
@@ -102,7 +101,6 @@ var kuriyagawaData = [
   {template: "kuriyagawaTemplate", time: {text: "10:07"}, lastStation: {text: "盛岡"}, rate: 1007, lag: {}},
   {template: "kuriyagawaTemplate", time: {text: "10:41"}, lastStation: {text: "盛岡"}, rate: 1041, lag: {}},
   {template: "kuriyagawaTemplate", time: {text: "11:05"}, lastStation: {text: "盛岡"}, rate: 1105, lag: {}},
-  {template: "kuriyagawaTemplate", time: {text: "11:48"}, lastStation: {text: "盛岡"}, rate: 1148, lag: {}},
   {template: "kuriyagawaTemplate", time: {text: "12:06"}, lastStation: {text: "[花]盛岡"}, rate: 1206, lag: {}},
   {template: "kuriyagawaTemplate", time: {text: "12:22"}, lastStation: {text: "盛岡"}, rate: 1222, lag: {}},
   {template: "kuriyagawaTemplate", time: {text: "12:51"}, lastStation: {text: "盛岡"}, rate: 1251, lag: {}},
@@ -114,7 +112,7 @@ var kuriyagawaData = [
   {template: "kuriyagawaTemplate", time: {text: "16:18"}, lastStation: {text: "[花]盛岡"}, rate: 1618, lag: {}},
   {template: "kuriyagawaTemplate", time: {text: "16:45"}, lastStation: {text: "盛岡"}, rate: 1645, lag: {}},
   {template: "kuriyagawaTemplate", time: {text: "17:07"}, lastStation: {text: "盛岡"}, rate: 1707, lag: {}},
-  {template: "kuriyagawaTemplate", time: {text: "17:47"}, lastStation: {text: "盛岡"}, rate: 1747, lag: {}},
+  {template: "kuriyagawaTemplate", time: {text: "17:50"}, lastStation: {text: "盛岡"}, rate: 1750, lag: {}},
   {template: "kuriyagawaTemplate", time: {text: "18:29"}, lastStation: {text: "[花]盛岡"}, rate: 1829, lag: {}},
   {template: "kuriyagawaTemplate", time: {text: "18:42"}, lastStation: {text: "盛岡"}, rate: 1842, lag: {}},
   {template: "kuriyagawaTemplate", time: {text: "18:53"}, lastStation: {text: "盛岡"}, rate: 1853, lag: {}},
@@ -126,7 +124,7 @@ var kuriyagawaData = [
   {template: "kuriyagawaTemplate", time: {text: "21:13"}, lastStation: {text: "盛岡"}, rate: 2113, lag: {}},
   {template: "kuriyagawaTemplate", time: {text: "21:52"}, lastStation: {text: "[花]盛岡"}, rate: 2152, lag: {}},
   {template: "kuriyagawaTemplate", time: {text: "22:15"}, lastStation: {text: "盛岡"}, rate: 2215, lag: {}},
-  {template: "kuriyagawaTemplate", time: {text: "22:40"}, lastStation: {text: "盛岡"}, rate: 2240, lag: {}}
+  {template: "kuriyagawaTemplate", time: {text: "22:42"}, lastStation: {text: "盛岡"}, rate: 2242, lag: {}}
 ];
 $.kuriyagawaListSection.setItems(kuriyagawaData);
 
@@ -147,20 +145,19 @@ var sugoData = [
   {template: "sugoTemplate", time: {text: "10:02"}, lastStation: {text: "盛岡"}, rate: 1002, lag: {}},
   {template: "sugoTemplate", time: {text: "10:37"}, lastStation: {text: "盛岡"}, rate: 1037, lag: {}},
   {template: "sugoTemplate", time: {text: "11:00"}, lastStation: {text: "盛岡"}, rate: 1100, lag: {}},
-  {template: "sugoTemplate", time: {text: "11:43"}, lastStation: {text: "盛岡"}, rate: 1143, lag: {}},
   {template: "sugoTemplate", time: {text: "12:01"}, lastStation: {text: "[花]盛岡"}, rate: 1201, lag: {}},
-  {template: "sugoTemplate", time: {text: "12:17"}, lastStation: {text: "[花]盛岡"}, rate: 1217, lag: {}},
+  {template: "sugoTemplate", time: {text: "12:17"}, lastStation: {text: "盛岡"}, rate: 1217, lag: {}},
   {template: "sugoTemplate", time: {text: "12:47"}, lastStation: {text: "盛岡"}, rate: 1247, lag: {}},
   {template: "sugoTemplate", time: {text: "13:29"}, lastStation: {text: "盛岡"}, rate: 1329, lag: {}},
   {template: "sugoTemplate", time: {text: "14:15"}, lastStation: {text: "盛岡"}, rate: 1415, lag: {}},
   {template: "sugoTemplate", time: {text: "14:35"}, lastStation: {text: "盛岡"}, rate: 1435, lag: {}},
   {template: "sugoTemplate", time: {text: "15:07"}, lastStation: {text: "盛岡"}, rate: 1507, lag: {}},
   {template: "sugoTemplate", time: {text: "15:42"}, lastStation: {text: "盛岡"}, rate: 1542, lag: {}},
-  {template: "sugoTemplate", time: {text: "16:14"}, lastStation: {text: "[花]盛岡"}, rate: 1614, lag: {}},
+  {template: "sugoTemplate", time: {text: "16:14"}, lastStation: {text: "[花]盛岡"}, rate: 1614, lag: {}},
   {template: "sugoTemplate", time: {text: "16:41"}, lastStation: {text: "盛岡"}, rate: 1641, lag: {}},
   {template: "sugoTemplate", time: {text: "17:02"}, lastStation: {text: "盛岡"}, rate: 1702, lag: {}},
-  {template: "sugoTemplate", time: {text: "17:43"}, lastStation: {text: "盛岡"}, rate: 1743, lag: {}},
-  {template: "sugoTemplate", time: {text: "18:24"}, lastStation: {text: "[花]盛岡"}, rate: 1824, lag: {}},
+  {template: "sugoTemplate", time: {text: "17:46"}, lastStation: {text: "盛岡"}, rate: 1746, lag: {}},
+  {template: "sugoTemplate", time: {text: "18:24"}, lastStation: {text: "[花]盛岡"}, rate: 1824, lag: {}},
   {template: "sugoTemplate", time: {text: "18:37"}, lastStation: {text: "盛岡"}, rate: 1837, lag: {}},
   {template: "sugoTemplate", time: {text: "18:49"}, lastStation: {text: "盛岡"}, rate: 1849, lag: {}},
   {template: "sugoTemplate", time: {text: "19:01"}, lastStation: {text: "盛岡 ＊土休日運休"}, rate: 1901, lag: {}},
@@ -171,7 +168,7 @@ var sugoData = [
   {template: "sugoTemplate", time: {text: "21:08"}, lastStation: {text: "盛岡"}, rate: 2108, lag: {}},
   {template: "sugoTemplate", time: {text: "21:47"}, lastStation: {text: "[花]盛岡"}, rate: 2147, lag: {}},
   {template: "sugoTemplate", time: {text: "22:11"}, lastStation: {text: "盛岡"}, rate: 2211, lag: {}},
-  {template: "sugoTemplate", time: {text: "22:36"}, lastStation: {text: "盛岡"}, rate: 2236, lag: {}}
+  {template: "sugoTemplate", time: {text: "22:38"}, lastStation: {text: "盛岡"}, rate: 2238, lag: {}}
 ];
 $.sugoListSection.setItems(sugoData);
 
@@ -192,7 +189,6 @@ var takizawaData = [
   {template: "takizawaTemplate", time: {text: "10:00"}, lastStation: {text: "盛岡"}, rate: 1000, lag: {}},
   {template: "takizawaTemplate", time: {text: "10:34"}, lastStation: {text: "盛岡"}, rate: 1034, lag: {}},
   {template: "takizawaTemplate", time: {text: "10:57"}, lastStation: {text: "盛岡"}, rate: 1057, lag: {}},
-  {template: "takizawaTemplate", time: {text: "11:40"}, lastStation: {text: "盛岡"}, rate: 1140, lag: {}},
   {template: "takizawaTemplate", time: {text: "11:58"}, lastStation: {text: "[花]盛岡"}, rate: 1158, lag: {}},
   {template: "takizawaTemplate", time: {text: "12:15"}, lastStation: {text: "盛岡"}, rate: 1215, lag: {}},
   {template: "takizawaTemplate", time: {text: "12:44"}, lastStation: {text: "盛岡"}, rate: 1244, lag: {}},
@@ -204,7 +200,7 @@ var takizawaData = [
   {template: "takizawaTemplate", time: {text: "16:11"}, lastStation: {text: "[花]盛岡"}, rate: 1611, lag: {}},
   {template: "takizawaTemplate", time: {text: "16:38"}, lastStation: {text: "盛岡"}, rate: 1638, lag: {}},
   {template: "takizawaTemplate", time: {text: "17:00"}, lastStation: {text: "盛岡"}, rate: 1700, lag: {}},
-  {template: "takizawaTemplate", time: {text: "17:40"}, lastStation: {text: "盛岡"}, rate: 1740, lag: {}},
+  {template: "takizawaTemplate", time: {text: "17:43"}, lastStation: {text: "盛岡"}, rate: 1743, lag: {}},
   {template: "takizawaTemplate", time: {text: "18:21"}, lastStation: {text: "[花]盛岡"}, rate: 1821, lag: {}},
   {template: "takizawaTemplate", time: {text: "18:35"}, lastStation: {text: "盛岡"}, rate: 1835, lag: {}},
   {template: "takizawaTemplate", time: {text: "18:46"}, lastStation: {text: "盛岡"}, rate: 1846, lag: {}},
@@ -216,7 +212,7 @@ var takizawaData = [
   {template: "takizawaTemplate", time: {text: "21:06"}, lastStation: {text: "盛岡"}, rate: 2106, lag: {}},
   {template: "takizawaTemplate", time: {text: "21:44"}, lastStation: {text: "[花]盛岡"}, rate: 2144, lag: {}},
   {template: "takizawaTemplate", time: {text: "22:08"}, lastStation: {text: "盛岡"}, rate: 2208, lag: {}},
-  {template: "takizawaTemplate", time: {text: "22:33"}, lastStation: {text: "盛岡"}, rate: 2233, lag: {}}
+  {template: "takizawaTemplate", time: {text: "22:35"}, lastStation: {text: "盛岡"}, rate: 2235, lag: {}}
 ];
 $.takizawaListSection.setItems(takizawaData);
 
@@ -244,7 +240,7 @@ var sibutamiData = [
   {template: "sibutamiTemplate", time: {text: "16:06"}, lastStation: {text: "[花]盛岡"}, rate: 1535, lag: {}},
   {template: "sibutamiTemplate", time: {text: "16:34"}, lastStation: {text: "盛岡"}, rate: 1634, lag: {}},
   {template: "sibutamiTemplate", time: {text: "16:55"}, lastStation: {text: "盛岡"}, rate: 1655, lag: {}},
-  {template: "sibutamiTemplate", time: {text: "17:35"}, lastStation: {text: "盛岡"}, rate: 1735, lag: {}},
+  {template: "sibutamiTemplate", time: {text: "17:38"}, lastStation: {text: "盛岡"}, rate: 1738, lag: {}},
   {template: "sibutamiTemplate", time: {text: "18:16"}, lastStation: {text: "[花]盛岡"}, rate: 1816, lag: {}},
   {template: "sibutamiTemplate", time: {text: "18:30"}, lastStation: {text: "盛岡"}, rate: 1830, lag: {}},
   {template: "sibutamiTemplate", time: {text: "18:42"}, lastStation: {text: "盛岡"}, rate: 1842, lag: {}},
@@ -256,7 +252,7 @@ var sibutamiData = [
   {template: "sibutamiTemplate", time: {text: "21:01"}, lastStation: {text: "盛岡"}, rate: 2101, lag: {}},
   {template: "sibutamiTemplate", time: {text: "21:39"}, lastStation: {text: "[花]盛岡"}, rate: 2139, lag: {}},
   {template: "sibutamiTemplate", time: {text: "22:03"}, lastStation: {text: "盛岡"}, rate: 2203, lag: {}},
-  {template: "sibutamiTemplate", time: {text: "22:29"}, lastStation: {text: "盛岡"}, rate: 2229, lag: {}}
+  {template: "sibutamiTemplate", time: {text: "22:31"}, lastStation: {text: "盛岡"}, rate: 2231, lag: {}}
 ];
 $.sibutamiListSection.setItems(sibutamiData);
 
@@ -276,14 +272,15 @@ var koumaData = [
   {template: "koumaTemplate", time: {text: "10:25"}, lastStation: {text: "盛岡"}, rate: 1025, lag: {}},
   {template: "koumaTemplate", time: {text: "11:48"}, lastStation: {text: "[花]盛岡"}, rate: 1148, lag: {}},
   {template: "koumaTemplate", time: {text: "12:06"}, lastStation: {text: "盛岡"}, rate: 1206, lag: {}},
-  {template: "koumaTemplate", time: {text: "12:35"}, lastStation: {text: "盛岡"}, rate: 1317, lag: {}},
+  {template: "koumaTemplate", time: {text: "12:35"}, lastStation: {text: "盛岡"}, rate: 1235, lag: {}},
+  {template: "koumaTemplate", time: {text: "13:17"}, lastStation: {text: "盛岡"}, rate: 1317, lag: {}},
   {template: "koumaTemplate", time: {text: "14:03"}, lastStation: {text: "盛岡"}, rate: 1403, lag: {}},
   {template: "koumaTemplate", time: {text: "14:23"}, lastStation: {text: "盛岡"}, rate: 1423, lag: {}},
   {template: "koumaTemplate", time: {text: "15:31"}, lastStation: {text: "盛岡"}, rate: 1531, lag: {}},
   {template: "koumaTemplate", time: {text: "16:01"}, lastStation: {text: "[花]盛岡"}, rate: 1601, lag: {}},
   {template: "koumaTemplate", time: {text: "16:29"}, lastStation: {text: "盛岡"}, rate: 1629, lag: {}},
   {template: "koumaTemplate", time: {text: "16:51"}, lastStation: {text: "盛岡"}, rate: 1651, lag: {}},
-  {template: "koumaTemplate", time: {text: "17:31"}, lastStation: {text: "盛岡"}, rate: 1731, lag: {}},
+  {template: "koumaTemplate", time: {text: "17:34"}, lastStation: {text: "盛岡"}, rate: 1734, lag: {}},
   {template: "koumaTemplate", time: {text: "18:11"}, lastStation: {text: "[花]盛岡"}, rate: 1811, lag: {}},
   {template: "koumaTemplate", time: {text: "18:26"}, lastStation: {text: "盛岡"}, rate: 1826, lag: {}},
   {template: "koumaTemplate", time: {text: "18:37"}, lastStation: {text: "盛岡"}, rate: 1837, lag: {}},
@@ -295,7 +292,7 @@ var koumaData = [
   {template: "koumaTemplate", time: {text: "20:57"}, lastStation: {text: "盛岡"}, rate: 2057, lag: {}},
   {template: "koumaTemplate", time: {text: "21:34"}, lastStation: {text: "[花]盛岡"}, rate: 2134, lag: {}},
   {template: "koumaTemplate", time: {text: "21:59"}, lastStation: {text: "盛岡"}, rate: 2159, lag: {}},
-  {template: "koumaTemplate", time: {text: "22:24"}, lastStation: {text: "盛岡"}, rate: 2224, lag: {}}
+  {template: "koumaTemplate", time: {text: "22:26"}, lastStation: {text: "盛岡"}, rate: 2226, lag: {}}
 ];
 $.koumaListSection.setItems(koumaData);
 
@@ -317,7 +314,7 @@ var kawagutiData = [
   {template: "kawagutiTemplate", time: {text: "15:26"}, lastStation: {text: "盛岡"}, rate: 1526, lag: {}},
   {template: "kawagutiTemplate", time: {text: "16:24"}, lastStation: {text: "盛岡"}, rate: 1624, lag: {}},
   {template: "kawagutiTemplate", time: {text: "16:46"}, lastStation: {text: "盛岡"}, rate: 1646, lag: {}},
-  {template: "kawagutiTemplate", time: {text: "17:26"}, lastStation: {text: "盛岡"}, rate: 1726, lag: {}},
+  {template: "kawagutiTemplate", time: {text: "17:29"}, lastStation: {text: "盛岡"}, rate: 1729, lag: {}},
   {template: "kawagutiTemplate", time: {text: "18:21"}, lastStation: {text: "盛岡"}, rate: 1821, lag: {}},
   {template: "kawagutiTemplate", time: {text: "18:32"}, lastStation: {text: "盛岡"}, rate: 1832, lag: {}},
   {template: "kawagutiTemplate", time: {text: "18:45"}, lastStation: {text: "盛岡 ＊土休日運休"}, rate: 1845, lag: {}},
@@ -326,7 +323,7 @@ var kawagutiData = [
   {template: "kawagutiTemplate", time: {text: "20:18"}, lastStation: {text: "盛岡"}, rate: 2018, lag: {}},
   {template: "kawagutiTemplate", time: {text: "20:52"}, lastStation: {text: "盛岡"}, rate: 2052, lag: {}},
   {template: "kawagutiTemplate", time: {text: "21:54"}, lastStation: {text: "盛岡"}, rate: 2154, lag: {}},
-  {template: "kawagutiTemplate", time: {text: "22:19"}, lastStation: {text: "盛岡"}, rate: 2219, lag: {}}
+  {template: "kawagutiTemplate", time: {text: "22:21"}, lastStation: {text: "盛岡"}, rate: 2221, lag: {}}
 ];
 $.kawagutiListSection.setItems(kawagutiData);
 
@@ -348,7 +345,7 @@ var numakunaiData = [
   {template: "numakunaiTemplate", time: {text: "15:21"}, lastStation: {text: "盛岡"}, rate: 1521, lag: {}},
   {template: "numakunaiTemplate", time: {text: "16:20"}, lastStation: {text: "盛岡"}, rate: 1620, lag: {}},
   {template: "numakunaiTemplate", time: {text: "16:41"}, lastStation: {text: "盛岡"}, rate: 1641, lag: {}},
-  {template: "numakunaiTemplate", time: {text: "17:21"}, lastStation: {text: "盛岡"}, rate: 1721, lag: {}},
+  {template: "numakunaiTemplate", time: {text: "17:24"}, lastStation: {text: "盛岡"}, rate: 1724, lag: {}},
   {template: "numakunaiTemplate", time: {text: "18:16"}, lastStation: {text: "盛岡"}, rate: 1816, lag: {}},
   {template: "numakunaiTemplate", time: {text: "18:28"}, lastStation: {text: "盛岡"}, rate: 1828, lag: {}},
   {template: "numakunaiTemplate", time: {text: "18:40"}, lastStation: {text: "盛岡 ＊土休日運休"}, rate: 1840, lag: {}},
@@ -357,7 +354,7 @@ var numakunaiData = [
   {template: "numakunaiTemplate", time: {text: "20:14"}, lastStation: {text: "盛岡"}, rate: 2014, lag: {}},
   {template: "numakunaiTemplate", time: {text: "20:47"}, lastStation: {text: "盛岡"}, rate: 2047, lag: {}},
   {template: "numakunaiTemplate", time: {text: "21:49"}, lastStation: {text: "盛岡"}, rate: 2149, lag: {}},
-  {template: "numakunaiTemplate", time: {text: "22:15"}, lastStation: {text: "盛岡"}, rate: 2215, lag: {}}
+  {template: "numakunaiTemplate", time: {text: "22:17"}, lastStation: {text: "盛岡"}, rate: 2217, lag: {}}
 ];
 $.numakunaiListSection.setItems(numakunaiData);
 
@@ -371,11 +368,11 @@ var midouData = [
   {template: "midouTemplate", time: {text: "13:49"}, lastStation: {text: "盛岡"}, rate: 1349, lag: {}},
   {template: "midouTemplate", time: {text: "15:16"}, lastStation: {text: "盛岡"}, rate: 1516, lag: {}},
   {template: "midouTemplate", time: {text: "16:15"}, lastStation: {text: "盛岡"}, rate: 1615, lag: {}},
-  {template: "midouTemplate", time: {text: "17:17"}, lastStation: {text: "盛岡"}, rate: 1717, lag: {}},
+  {template: "midouTemplate", time: {text: "17:20"}, lastStation: {text: "盛岡"}, rate: 1720, lag: {}},
   {template: "midouTemplate", time: {text: "18:23"}, lastStation: {text: "盛岡"}, rate: 1823, lag: {}},
   {template: "midouTemplate", time: {text: "18:52"}, lastStation: {text: "盛岡"}, rate: 1852, lag: {}},
   {template: "midouTemplate", time: {text: "20:09"}, lastStation: {text: "盛岡"}, rate: 2009, lag: {}},
-  {template: "midouTemplate", time: {text: "22:10"}, lastStation: {text: "盛岡"}, rate: 2210, lag: {}}
+  {template: "midouTemplate", time: {text: "22:12"}, lastStation: {text: "盛岡"}, rate: 2212, lag: {}}
 ];
 $.midouListSection.setItems(midouData);
 
@@ -389,11 +386,11 @@ var okunakayamaData = [
   {template: "okunakayamaTemplate", time: {text: "13:43"}, lastStation: {text: "盛岡"}, rate: 1343, lag: {}},
   {template: "okunakayamaTemplate", time: {text: "15:10"}, lastStation: {text: "盛岡"}, rate: 1510, lag: {}},
   {template: "okunakayamaTemplate", time: {text: "16:09"}, lastStation: {text: "盛岡"}, rate: 1609, lag: {}},
-  {template: "okunakayamaTemplate", time: {text: "17:10"}, lastStation: {text: "盛岡"}, rate: 1710, lag: {}},
+  {template: "okunakayamaTemplate", time: {text: "17:13"}, lastStation: {text: "盛岡"}, rate: 1713, lag: {}},
   {template: "okunakayamaTemplate", time: {text: "18:17"}, lastStation: {text: "盛岡"}, rate: 1817, lag: {}},
   {template: "okunakayamaTemplate", time: {text: "18:46"}, lastStation: {text: "盛岡"}, rate: 1846, lag: {}},
   {template: "okunakayamaTemplate", time: {text: "20:03"}, lastStation: {text: "盛岡"}, rate: 2003, lag: {}},
-  {template: "okunakayamaTemplate", time: {text: "22:04"}, lastStation: {text: "盛岡"}, rate: 2204, lag: {}}
+  {template: "okunakayamaTemplate", time: {text: "22:06"}, lastStation: {text: "盛岡"}, rate: 2206, lag: {}}
 ];
 $.okunakayamaListSection.setItems(okunakayamaData);
 
@@ -407,11 +404,11 @@ var kotunagiData = [
   {template: "kotunagiTemplate", time: {text: "13:36"}, lastStation: {text: "盛岡"}, rate: 1336, lag: {}},
   {template: "kotunagiTemplate", time: {text: "15:03"}, lastStation: {text: "盛岡"}, rate: 1503, lag: {}},
   {template: "kotunagiTemplate", time: {text: "16:02"}, lastStation: {text: "盛岡"}, rate: 1602, lag: {}},
-  {template: "kotunagiTemplate", time: {text: "17:03"}, lastStation: {text: "盛岡"}, rate: 1703, lag: {}},
+  {template: "kotunagiTemplate", time: {text: "17:06"}, lastStation: {text: "盛岡"}, rate: 1706, lag: {}},
   {template: "kotunagiTemplate", time: {text: "18:10"}, lastStation: {text: "盛岡"}, rate: 1810, lag: {}},
   {template: "kotunagiTemplate", time: {text: "18:39"}, lastStation: {text: "盛岡"}, rate: 1839, lag: {}},
   {template: "kotunagiTemplate", time: {text: "19:56"}, lastStation: {text: "盛岡"}, rate: 1956, lag: {}},
-  {template: "kotunagiTemplate", time: {text: "21:57"}, lastStation: {text: "盛岡"}, rate: 2157, lag: {}}
+  {template: "kotunagiTemplate", time: {text: "21:59"}, lastStation: {text: "盛岡"}, rate: 2159, lag: {}}
 ];
 $.kotunagiListSection.setItems(kotunagiData);
 
@@ -425,11 +422,11 @@ var kozuyaData = [
   {template: "kozuyaTemplate", time: {text: "13:29"}, lastStation: {text: "盛岡"}, rate: 1329, lag: {}},
   {template: "kozuyaTemplate", time: {text: "14:56"}, lastStation: {text: "盛岡"}, rate: 1456, lag: {}},
   {template: "kozuyaTemplate", time: {text: "15:55"}, lastStation: {text: "盛岡"}, rate: 1555, lag: {}},
-  {template: "kozuyaTemplate", time: {text: "16:56"}, lastStation: {text: "盛岡"}, rate: 1656, lag: {}},
+  {template: "kozuyaTemplate", time: {text: "16:59"}, lastStation: {text: "盛岡"}, rate: 1659, lag: {}},
   {template: "kozuyaTemplate", time: {text: "18:03"}, lastStation: {text: "盛岡"}, rate: 1803, lag: {}},
   {template: "kozuyaTemplate", time: {text: "18:32"}, lastStation: {text: "盛岡"}, rate: 1832, lag: {}},
   {template: "kozuyaTemplate", time: {text: "19:49"}, lastStation: {text: "盛岡"}, rate: 1949, lag: {}},
-  {template: "kozuyaTemplate", time: {text: "21:50"}, lastStation: {text: "盛岡"}, rate: 2150, lag: {}}
+  {template: "kozuyaTemplate", time: {text: "21:52"}, lastStation: {text: "盛岡"}, rate: 2152, lag: {}}
 ];
 $.kozuyaListSection.setItems(kozuyaData);
 
@@ -443,17 +440,17 @@ var itinoheData = [
   {template: "itinoheTemplate", time: {text: "13:24"}, lastStation: {text: "盛岡"}, rate: 1324, lag: {}},
   {template: "itinoheTemplate", time: {text: "14:52"}, lastStation: {text: "盛岡"}, rate: 1452, lag: {}},
   {template: "itinoheTemplate", time: {text: "15:50"}, lastStation: {text: "盛岡"}, rate: 1550, lag: {}},
-  {template: "itinoheTemplate", time: {text: "16:52"}, lastStation: {text: "盛岡"}, rate: 1652, lag: {}},
+  {template: "itinoheTemplate", time: {text: "16:55"}, lastStation: {text: "盛岡"}, rate: 1655, lag: {}},
   {template: "itinoheTemplate", time: {text: "17:58"}, lastStation: {text: "盛岡"}, rate: 1758, lag: {}},
   {template: "itinoheTemplate", time: {text: "18:27"}, lastStation: {text: "盛岡"}, rate: 1827, lag: {}},
   {template: "itinoheTemplate", time: {text: "19:44"}, lastStation: {text: "盛岡"}, rate: 1944, lag: {}},
-  {template: "itinoheTemplate", time: {text: "21:45"}, lastStation: {text: "盛岡"}, rate: 2145, lag: {}}
+  {template: "itinoheTemplate", time: {text: "21:47"}, lastStation: {text: "盛岡"}, rate: 2147, lag: {}}
 ];
 $.itinoheListSection.setItems(itinoheData);
 
 var ninoheData = [
   {template: "ninoheTemplate", time: {text: "6:35"}, lastStation: {text: "盛岡"}, rate: 635, lag: {}},
-  {template: "ninoheTemplate", time: {text: "6:49"}, lastStation: {text: "盛岡"}, rate: 649, lag: {}},
+  {template: "ninoheTemplate", time: {text: "6:48"}, lastStation: {text: "盛岡"}, rate: 648, lag: {}},
   {template: "ninoheTemplate", time: {text: "7:51"}, lastStation: {text: "盛岡"}, rate: 751, lag: {}},
   {template: "ninoheTemplate", time: {text: "8:49"}, lastStation: {text: "盛岡"}, rate: 849, lag: {}},
   {template: "ninoheTemplate", time: {text: "9:39"}, lastStation: {text: "盛岡"}, rate: 939, lag: {}},
@@ -461,62 +458,57 @@ var ninoheData = [
   {template: "ninoheTemplate", time: {text: "13:19"}, lastStation: {text: "盛岡"}, rate: 1319, lag: {}},
   {template: "ninoheTemplate", time: {text: "14:46"}, lastStation: {text: "盛岡"}, rate: 1446, lag: {}},
   {template: "ninoheTemplate", time: {text: "15:45"}, lastStation: {text: "盛岡"}, rate: 1545, lag: {}},
-  {template: "ninoheTemplate", time: {text: "16:46"}, lastStation: {text: "盛岡"}, rate: 1646, lag: {}},
+  {template: "ninoheTemplate", time: {text: "16:49"}, lastStation: {text: "盛岡"}, rate: 1649, lag: {}},
   {template: "ninoheTemplate", time: {text: "17:53"}, lastStation: {text: "盛岡"}, rate: 1753, lag: {}},
   {template: "ninoheTemplate", time: {text: "18:22"}, lastStation: {text: "盛岡"}, rate: 1822, lag: {}},
   {template: "ninoheTemplate", time: {text: "19:39"}, lastStation: {text: "盛岡"}, rate: 1939, lag: {}},
-  {template: "ninoheTemplate", time: {text: "21:40"}, lastStation: {text: "盛岡"}, rate: 2140, lag: {}}
+  {template: "ninoheTemplate", time: {text: "21:42"}, lastStation: {text: "盛岡"}, rate: 2142, lag: {}}
 ];
 $.ninoheListSection.setItems(ninoheData);
 
 var tomaiData = [
   {template: "tomaiTemplate", time: {text: "6:32"}, lastStation: {text: "盛岡"}, rate: 632, lag: {}},
-  {template: "tomaiTemplate", time: {text: "6:46"}, lastStation: {text: "盛岡"}, rate: 646, lag: {}},
+  {template: "tomaiTemplate", time: {text: "6:45"}, lastStation: {text: "盛岡"}, rate: 645, lag: {}},
   {template: "tomaiTemplate", time: {text: "7:48"}, lastStation: {text: "盛岡"}, rate: 748, lag: {}},
   {template: "tomaiTemplate", time: {text: "9:28"}, lastStation: {text: "盛岡"}, rate: 928, lag: {}},
   {template: "tomaiTemplate", time: {text: "11:48"}, lastStation: {text: "盛岡"}, rate: 1148, lag: {}},
   {template: "tomaiTemplate", time: {text: "13:16"}, lastStation: {text: "盛岡"}, rate: 1316, lag: {}},
   {template: "tomaiTemplate", time: {text: "14:43"}, lastStation: {text: "盛岡"}, rate: 1443, lag: {}},
   {template: "tomaiTemplate", time: {text: "15:42"}, lastStation: {text: "盛岡"}, rate: 1542, lag: {}},
-  {template: "tomaiTemplate", time: {text: "16:43"}, lastStation: {text: "盛岡"}, rate: 1643, lag: {}},
-  {template: "tomaiTemplate", time: {text: "17:40"}, lastStation: {text: "二戸"}, rate: 1740, lag: {}},
+  {template: "tomaiTemplate", time: {text: "16:46"}, lastStation: {text: "盛岡"}, rate: 1646, lag: {}},
   {template: "tomaiTemplate", time: {text: "17:50"}, lastStation: {text: "盛岡"}, rate: 1750, lag: {}},
   {template: "tomaiTemplate", time: {text: "18:19"}, lastStation: {text: "盛岡"}, rate: 1819, lag: {}},
   {template: "tomaiTemplate", time: {text: "19:36"}, lastStation: {text: "盛岡"}, rate: 1936, lag: {}},
-  {template: "tomaiTemplate", time: {text: "21:37"}, lastStation: {text: "盛岡"}, rate: 2137, lag: {}}
+  {template: "tomaiTemplate", time: {text: "21:39"}, lastStation: {text: "盛岡"}, rate: 2139, lag: {}}
 ];
 $.tomaiListSection.setItems(tomaiData);
 
 var kintaitiData = [
   {template: "kintaitiTemplate", time: {text: "6:28"}, lastStation: {text: "盛岡"}, rate: 628, lag: {}},
-  {template: "kintaitiTemplate", time: {text: "6:41"}, lastStation: {text: "盛岡"}, rate: 641, lag: {}},
+  {template: "kintaitiTemplate", time: {text: "6:40"}, lastStation: {text: "盛岡"}, rate: 640, lag: {}},
   {template: "kintaitiTemplate", time: {text: "7:43"}, lastStation: {text: "盛岡"}, rate: 743, lag: {}},
   {template: "kintaitiTemplate", time: {text: "9:23"}, lastStation: {text: "盛岡"}, rate: 923, lag: {}},
   {template: "kintaitiTemplate", time: {text: "11:43"}, lastStation: {text: "盛岡"}, rate: 1143, lag: {}},
   {template: "kintaitiTemplate", time: {text: "13:11"}, lastStation: {text: "盛岡"}, rate: 1311, lag: {}},
   {template: "kintaitiTemplate", time: {text: "14:38"}, lastStation: {text: "盛岡"}, rate: 1438, lag: {}},
   {template: "kintaitiTemplate", time: {text: "15:37"}, lastStation: {text: "盛岡"}, rate: 1537, lag: {}},
-  {template: "kintaitiTemplate", time: {text: "16:38"}, lastStation: {text: "盛岡"}, rate: 1638, lag: {}},
-  {template: "kintaitiTemplate", time: {text: "17:35"}, lastStation: {text: "盛岡"}, rate: 1735, lag: {}},
+  {template: "kintaitiTemplate", time: {text: "16:41"}, lastStation: {text: "盛岡"}, rate: 1641, lag: {}},
+  {template: "kintaitiTemplate", time: {text: "17:45"}, lastStation: {text: "盛岡"}, rate: 1745, lag: {}},
   {template: "kintaitiTemplate", time: {text: "18:14"}, lastStation: {text: "盛岡"}, rate: 1814, lag: {}},
   {template: "kintaitiTemplate", time: {text: "19:31"}, lastStation: {text: "盛岡"}, rate: 1931, lag: {}},
-  {template: "kintaitiTemplate", time: {text: "21:32"}, lastStation: {text: "盛岡"}, rate: 2132, lag: {}}
+  {template: "kintaitiTemplate", time: {text: "21:34"}, lastStation: {text: "盛岡"}, rate: 2134, lag: {}}
 ];
 $.kintaitiListSection.setItems(kintaitiData);
 
 var metokiData = [
-  {template: "metokiTemplate", time: {text: "6:37"}, lastStation: {text: "盛岡"}, rate: 637, lag: {}},
+  {template: "metokiTemplate", time: {text: "6:36"}, lastStation: {text: "盛岡"}, rate: 636, lag: {}},
   {template: "metokiTemplate", time: {text: "7:39"}, lastStation: {text: "盛岡"}, rate: 739, lag: {}},
   {template: "metokiTemplate", time: {text: "9:19"}, lastStation: {text: "盛岡"}, rate: 919, lag: {}},
-  {template: "metokiTemplate", time: {text: "11:39"}, lastStation: {text: "盛岡"}, rate: 1139, lag: {}},
-  {template: "metokiTemplate", time: {text: "13:07"}, lastStation: {text: "盛岡"}, rate: 1307, lag: {}},
   {template: "metokiTemplate", time: {text: "14:34"}, lastStation: {text: "盛岡"}, rate: 1434, lag: {}},
-  {template: "metokiTemplate", time: {text: "15:33"}, lastStation: {text: "盛岡"}, rate: 1533, lag: {}},
-  {template: "metokiTemplate", time: {text: "16:34"}, lastStation: {text: "盛岡"}, rate: 1634, lag: {}},
-  {template: "metokiTemplate", time: {text: "17:31"}, lastStation: {text: "二戸"}, rate: 1731, lag: {}},
+  {template: "metokiTemplate", time: {text: "16:37"}, lastStation: {text: "盛岡"}, rate: 1637, lag: {}},
   {template: "metokiTemplate", time: {text: "18:10"}, lastStation: {text: "盛岡"}, rate: 1810, lag: {}},
   {template: "metokiTemplate", time: {text: "19:27"}, lastStation: {text: "盛岡"}, rate: 1927, lag: {}},
-  {template: "metokiTemplate", time: {text: "21:28"}, lastStation: {text: "盛岡"}, rate: 2128, lag: {}}
+  {template: "metokiTemplate", time: {text: "21:30"}, lastStation: {text: "盛岡"}, rate: 2130, lag: {}}
 ];
 $.metokiListSection.setItems(metokiData);
 
