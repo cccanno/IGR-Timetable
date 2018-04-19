@@ -32,12 +32,12 @@
 	color: "#333333"
 }
 
-".checkImage": {
-	backgroundImage: "/icons/checkOff.png",
+"Switch": {
 	right: 15,
-	width: 30,
-	height: 30,
-	backgroundColor: "#FFFFFF"
+	backgroundColor: "#FFFFFF",
+	tintColor: "#e6e6e6",
+	onTintColor: "#6699FF",
+	value: true
 }
 
 /* 運行情報 */

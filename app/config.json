@@ -8,5 +8,7 @@
 	"os:ios": {},
 	"os:mobileweb": {},
 	"os:windows": {},
-	"dependencies": {}
+	"dependencies": {
+		"com.mattmcfarland.fontawesome": "1.7.3"
+	}
 }

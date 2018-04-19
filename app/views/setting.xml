@@ -1,32 +1,25 @@
 <Alloy>
 	<Window id="stationMapWin">
 		<View class="container">
-
 			<!-- ナビゲーションView -->
 			<View class="navContainer" platform="ios">
 				<Label class="navTitle">設定</Label>
 			</View>
 			<View class="borderLine" platform="ios" />
-
 			<!-- 駅マップ -->
 			<ScrollView class="scrollContainer" backgroundColor="#DFDFDF">
-
 				<View class="horizontalContainer">
 					<Label class="checkLabel">GPS機能</Label>
-					<Button id="gps" class="checkImage" onClick="doGps" />
+					<Switch id="gps" onChange="setGps" />
 				</View>
-
 				<View class="horizontalContainer">
 					<Label class="checkLabel">発車時刻自動スライド</Label>
-					<Button id="slide" class="checkImage" onClick="doSlide" />
+					<Switch id="slide" onChange="setAutoSlide" />
 				</View>
-
 				<View id="travelInformationContainer" onClick="showTravelInformation">
 					<Label class="travelInformationLabel">運行情報はこちら</Label>
 				</View>
-
 			</ScrollView>
-
 		</View>
 	</Window>
 </Alloy>
