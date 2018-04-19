@@ -20,5 +20,11 @@ function setAutoSlide(e) {
 
 /* 運行情報 */
 function showTravelInformation() {
-	Ti.Platform.openURL("http://www.igr.jp/wp/operatinginfo");
+	if(Alloy.Globals.safariView.isSupported()){
+		Alloy.Globals.safariView.open({
+			url: 'http://www.igr.jp/wp/operatinginfo',
+			entersReaderIfAvailable: false,
+			title: 'IGR'
+		});
+	}
 }

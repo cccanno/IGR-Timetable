@@ -60,6 +60,7 @@
     <theme>default</theme>
   </mobileweb>
   <modules>
+    <module platform="iphone">ti.safaridialog</module>
     <!-- <module platform="android">ti.map</module> -->
     <!-- <module platform="iphone">ti.map</module> -->
   </modules>

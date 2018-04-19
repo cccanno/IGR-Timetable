@@ -1,3 +1,6 @@
+/* require */
+Alloy.Globals.safariView = require('ti.safaridialog');
+
 Alloy.Globals.currentPage = 0;
 // Alloy.Globals.Map = require('ti.map');
 Alloy.Globals.latitude = 39.702053;
