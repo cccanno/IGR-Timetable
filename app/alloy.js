@@ -1,5 +1,6 @@
 /* require */
 Alloy.Globals.safariView = require('ti.safaridialog');
+Alloy.Globals.nendAd = require('net.nend');
 
 Alloy.Globals.currentPage = 0;
 // Alloy.Globals.Map = require('ti.map');

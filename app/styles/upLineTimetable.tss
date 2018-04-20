@@ -1,0 +1,6 @@
+"#nendView": {
+  bottom: 0,
+  isAdjust: true,
+  apiKey: Alloy.CFG.nendApiKey,
+  spotId: Alloy.CFG.nendSpotId
+}

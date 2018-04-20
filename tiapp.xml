@@ -61,6 +61,7 @@
   </mobileweb>
   <modules>
     <module platform="iphone">ti.safaridialog</module>
+    <module platform="iphone" version="1.4.1">net.nend</module>
     <!-- <module platform="android">ti.map</module> -->
     <!-- <module platform="iphone">ti.map</module> -->
   </modules>

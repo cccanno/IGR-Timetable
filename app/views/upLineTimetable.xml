@@ -1,7 +1,7 @@
 <Alloy>
   <Window id="upLineTimetableWin" onFocus="showNearStationTab">
     <View id="stationNameTabLine" class="stationNameTabLine" />
-    <View class="container">
+    <View class="container" bottom="50">
 
       <!-- 駅名スクロールタブ -->
       <ScrollView id="stationNameTabScroll" class="stationNameTabScrollContainer">
@@ -231,7 +231,7 @@
           <ListSection id="metokiListSection" />
         </ListView>
       </ScrollableView>
-
     </View>
+    <View ns="Alloy.Globals.nendAd" id="nendView" />
   </Window>
 </Alloy>

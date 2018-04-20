@@ -5,7 +5,10 @@
 	"env:production": {},
 	"os:android": {},
 	"os:blackberry": {},
-	"os:ios": {},
+	"os:ios": {
+		"nendApiKey": "bffaa2d0c8da2103a7481ba3254ada2df191b6fa",
+		"nendSpotId": "867486"
+	},
 	"os:mobileweb": {},
 	"os:windows": {},
 	"dependencies": {
